@@ -1,0 +1,26 @@
+{
+  "name": "discord-trivia-bot",
+  "version": "1.0.0",
+  "description": "A trivia bot for Discord written in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimorris/discord-trivia-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "trivia",
+    "bot",
+    "javascript",
+    "js"
+  ],
+  "author": "Adam Morris",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/aimorris/discord-trivia-bot/issues"
+  },
+  "homepage": "https://github.com/aimorris/discord-trivia-bot#readme"
+}
