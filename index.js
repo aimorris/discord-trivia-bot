@@ -4,11 +4,11 @@ const client = new Discord.Client();
 client.login('Nzc5MjM5MTI4Mzk1MDIyMzM2.X7do_Q.wgUQFXT5uHgswh1HC33ijnceLPw');
 
 let botTriviaChannel;
-let botTriviaQuestions;
-const botTriviaTimeout = 1000;
+let botQuestions;
+const botTimeout = 1000;
 
-let botTriviaQuestion;
-let botTriviaAnswer;
+let botQuestion;
+let botAnswers;
 
 // After the bot is logged in and ready
 client.once('ready', () => {
@@ -16,23 +16,27 @@ client.once('ready', () => {
   botTriviaChannel = client.channels.cache.get('779241835649957939');
 
   // Starts sending questions to #bot-trivia
-  botTriviaQuestions = setInterval(botTriviaNewQuestion, botTriviaTimeout);
+  botQuestions = setInterval(botNewQuestion, botTimeout);
 });
 
 client.on('message', msg => {
-  if (msg.content == botTriviaAnswer) {
+  if (botAnswers.includes(msg.content)) {
     // Stops old interval
-    clearInterval(botTriviaQuestions);
+    clearInterval(botQuestions);
 
     // Starts new interval
-    botTriviaQuestions = setInterval(botTriviaNewQuestion, botTriviaTimeout);
+    botQuestions = setInterval(botNewQuestion, botTimeout);
   }
 });
 
-const botTriviaNewQuestion = () => {
-  botTriviaQuestion = '1+1?';
-  botTriviaAnswer = '2';
+const botNewQuestion = () => {
+  fetchBotQuestion();
 
   // Sends the trivia question to the #bot-trivia channel
-  botTriviaChannel.send(botTriviaQuestion);
+  botTriviaChannel.send(botQuestion);
+};
+
+const fetchBotQuestion = () => {
+  botQuestion = '1+1?';
+  botAnswers = ['2'];
 };
