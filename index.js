@@ -42,7 +42,9 @@ const botNewQuestion = () => {
 
 const fetchBotQuestion = () => {
   MongoClient.connect(mongoUri, (err, db) => {
-    console.log(db.collection('questions').aggregate([{ $sample: { size: 1 } }]));
+    const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]);
+
+    console.log(newQuestion.pretty());
 
     db.close();
   });
