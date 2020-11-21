@@ -4,9 +4,7 @@ const token = require('./token.json');
 const client = new Discord.Client();
 client.login(token.token);
 
-const Keyv = require('keyv');
-const keyv = new Keyv('mongodb://admin:password@localhost:27017/trivia?authSource=admin', { collection: 'trivia' });
-keyv.on('error', err => console.error('Keyv connection error:', err));
+// mongodb://admin:password@localhost:27017/trivia?authSource=admin
 
 let botTriviaChannel;
 let botQuestions;
@@ -22,8 +20,6 @@ client.once('ready', () => {
 
   // Starts sending questions to #bot-trivia
   botQuestions = setInterval(botNewQuestion, botTimeout);
-
-  keyv.set('0', '1');
 });
 
 client.on('message', msg => {
