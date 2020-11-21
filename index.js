@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const { MongoClient } = require('mongodb');
 const token = require('./token.json');
-const mongo = require('mongodb').MongoClient;
 const mongoUri = 'mongodb://admin:password@localhost:27017/trivia?authSource=admin';
 
 const client = new Discord.Client();
@@ -37,20 +36,16 @@ const botNewQuestion = () => {
   fetchBotQuestion();
 
   // Sends the trivia question to the #bot-trivia channel
-  // botTriviaChannel.send(botQuestion);
+  botTriviaChannel.send(botQuestion);
 };
 
 const fetchBotQuestion = () => {
   MongoClient.connect(mongoUri, (err, db) => {
-    const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]).toArray();
-
-    // newQuestion.toArray((error, result) => {
-    //   if (error) {
-    //     console.error(error);
-    //   }
-
-    //   console.log(result);
-    // });
+    const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]);
+    newQuestion.toArray((e, res) => {
+      if (e) console.error(e);
+      botQuestion = res;
+    });
 
     console.log(newQuestion);
 
