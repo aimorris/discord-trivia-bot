@@ -3,14 +3,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 client.login('Nzc5MjM5MTI4Mzk1MDIyMzM2.X7do_Q.wgUQFXT5uHgswh1HC33ijnceLPw');
 
-const Keyv = require('keyv');
-
-const keyv = new Keyv();
-keyv.on('error', err => console.error('Keyv connection error:', err));
-
 let botTriviaChannel;
 let botTriviaQuestions;
 const botTriviaTimeout = 1000;
+
+let botTriviaQuestion;
+let botTriviaAnswer;
 
 // After the bot is logged in and ready
 client.once('ready', () => {
@@ -22,14 +20,19 @@ client.once('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content == 'hi') {
+  if (msg.content == botTriviaAnswer) {
+    // Stops old interval
     clearInterval(botTriviaQuestions);
-    botTriviaChannel.send('hey');
+
+    // Starts new interval
+    botTriviaQuestions = setInterval(botTriviaNewQuestion, botTriviaTimeout);
   }
 });
 
 const botTriviaNewQuestion = () => {
-  botTriviaChannel.send('hi');
+  botTriviaQuestion = '1+1?';
+  botTriviaAnswer = '2';
+
+  // Sends the trivia question to the #bot-trivia channel
+  botTriviaChannel.send(botTriviaQuestion);
 };
-
-
