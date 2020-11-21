@@ -52,6 +52,5 @@ const fetchBotQuestion = () => {
     db.close();
   });
 
-  botQuestion = '1+1?';
   botAnswers = ['2'];
 };
