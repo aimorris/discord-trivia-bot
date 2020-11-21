@@ -5,7 +5,7 @@ const client = new Discord.Client();
 client.login(token.token);
 
 const Keyv = require('keyv');
-const keyv = new Keyv('mongodb://admin:password@localhost:27017/trivia');
+const keyv = new Keyv('mongodb://admin:password@localhost:27017/trivia?authSource=admin');
 keyv.on('error', err => console.error('Keyv connection error:', err));
 
 let botTriviaChannel;
