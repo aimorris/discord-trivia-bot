@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
-client.login('Nzc5MjM5MTI4Mzk1MDIyMzM2.X7do_Q.wgUQFXT5uHgswh1HC33ijnceLPw');
+client.login('Nzc5MjM5MTI4Mzk1MDIyMzM2.X7do_Q.DyZE2MOOqwusT9y1vubaIBXM66M');
 
 let botTriviaChannel;
 let botQuestions;
