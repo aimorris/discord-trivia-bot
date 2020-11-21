@@ -23,8 +23,7 @@ client.once('ready', () => {
   // Starts sending questions to #bot-trivia
   botQuestions = setInterval(botNewQuestion, botTimeout);
 
-  const test = keyv.get('In the AAMCO song, when does the double beep occur.');
-  console.log(test);
+  keyv.get('In the AAMCO song, when does the double beep occur.').then(val => console.log(val));
 });
 
 client.on('message', msg => {
