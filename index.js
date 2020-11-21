@@ -4,6 +4,10 @@ const token = require('./token.json');
 const client = new Discord.Client();
 client.login(token.token);
 
+const Keyv = require('keyv');
+const keyv = new Keyv('mongodb://admin:password@localhost:27017/trivia');
+keyv.on('error', err => console.error('Keyv connection error:', err));
+
 let botTriviaChannel;
 let botQuestions;
 const botTimeout = 1000;
@@ -18,6 +22,9 @@ client.once('ready', () => {
 
   // Starts sending questions to #bot-trivia
   botQuestions = setInterval(botNewQuestion, botTimeout);
+
+  const test = keyv.get('In the AAMCO song, when does the double beep occur.');
+  console.log(test);
 });
 
 client.on('message', msg => {
