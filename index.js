@@ -23,9 +23,7 @@ client.once('ready', () => {
   // Starts sending questions to #bot-trivia
   botQuestions = setInterval(botNewQuestion, botTimeout);
 
-  keyv.get('0').then((val) => {
-    console.log(val);
-  });
+  keyv.set('0', '1');
 });
 
 client.on('message', msg => {
