@@ -44,11 +44,12 @@ const fetchBotQuestion = () => {
     const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]);
     newQuestion.toArray((e, res) => {
       if (e) console.error(e);
-      botQuestion = res;
+
+      console.log(res);
+
+      botQuestion = res['question'];
+      botAnswers = res['answers'];
     });
-
-    console.log(newQuestion);
-
     db.close();
   });
 
