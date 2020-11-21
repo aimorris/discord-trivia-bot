@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
+const token = require('./token.json');
 
 const client = new Discord.Client();
-client.login('Nzc5MjM5MTI4Mzk1MDIyMzM2.X7do_Q.DyZE2MOOqwusT9y1vubaIBXM66M');
+client.login(token.token);
 
 let botTriviaChannel;
 let botQuestions;
