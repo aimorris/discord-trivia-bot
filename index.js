@@ -31,9 +31,7 @@ client.on('message', async msg => {
     // Stops old interval
     clearInterval(botQuestions);
 
-    // addToScore(msg.member.id, 1);
-    const exists = await memberExists(msg.member.id);
-    console.log(exists);
+    addToScore(msg.member.id, 1);
 
     answered = 'true';
     answerer = msg.member;
@@ -90,16 +88,22 @@ function fetchBotQuestion() {
   });
 }
 
-function addToScore(member, amt) {
-  MongoClient.connect(mongoUri, (err, db) => {
-    db.collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
-    db.close();
-  });
+async function addToScore(member, amt) {
+  if (memberExists(member)) {
+    MongoClient.connect(mongoUri, (err, db) => {
+      db.collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
+      db.close();
+    });
+  }
+  else {
+    await addMember(member);
+    addToScore(member, amt);
+  }
 }
 
 function addMember(member) {
   MongoClient.connect(mongoUri, (err, db) => {
-    db.collection('users');
+    db.collection('users').insertOne( { 'user' : member, ' score ' : 0 });
     db.close();
   });
 }
@@ -107,10 +111,10 @@ function addMember(member) {
 function memberExists(member) {
   return new Promise(resolve => {
     MongoClient.connect(mongoUri, (err, db) => {
-      const exists = db.collection('users').find({ 'user' : member }, { '_id' : 1 });
+      const exists = db.collection('users').findOne({ 'user' : member }, { '_id' : 1 });
       exists.toArray((e, res) => {
         if (e) console.error(e);
-        resolve(res);
+        resolve(res.length > 0);
       });
       db.close();
     });
