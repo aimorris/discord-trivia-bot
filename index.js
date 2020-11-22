@@ -107,7 +107,11 @@ function addMember(member) {
 function memberExists(member) {
   return new Promise(resolve => {
     MongoClient.connect(mongoUri, (err, db) => {
-      resolve(db.collection('users').find({ 'user' : member }, { '_id' : 1 }));
+      const exists = db.collection('users').find({ 'user' : member }, { '_id' : 1 });
+      exists.toArray((e, res) => {
+        if (e) console.error(e);
+        resolve(res);
+      });
       db.close();
     });
   });
