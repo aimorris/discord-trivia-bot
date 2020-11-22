@@ -46,9 +46,19 @@ async function botNewQuestion() {
   botAnswers = newQuestion[1];
 
   if (answered == 'true') {
+    const answeredEmbed = new Discord.MessageEmbed()
+      .setColor('#6ab04c')
+      .setTitle('Well done, ' + answerer + '!')
+      .setDescription('1 point has been added to your score on the <#779461499113439243>.');
 
-  } else if (answered == 'false') {
-  
+    botTriviaChannel.send(answeredEmbed);
+  }
+  else if (answered == 'false') {
+    const notAnsweredEmbed = new Discord.MessageEmbed()
+      .setColor('#eb4d4b')
+      .setTitle('No one answered');
+
+    botTriviaChannel.send(notAnsweredEmbed);
   }
 
   const questionEmbed = new Discord.MessageEmbed()
