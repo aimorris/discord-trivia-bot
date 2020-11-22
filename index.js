@@ -13,6 +13,9 @@ const botTimeout = 10000;
 let botQuestion;
 let botAnswers;
 
+let answered = 'first';
+let answerer;
+
 // After the bot is logged in and ready
 client.once('ready', () => {
   // Gets the #bot-trivia channel
@@ -28,6 +31,8 @@ client.on('message', msg => {
     // Stops old interval
     clearInterval(botQuestions);
 
+    answerer = msg.member.displayName;
+
     // Starts new interval
     botNewQuestion();
     botQuestions = setInterval(botNewQuestion, botTimeout);
@@ -40,7 +45,13 @@ async function botNewQuestion() {
   botQuestion = newQuestion[0];
   botAnswers = newQuestion[1];
 
-  let questionEmbed = new Discord.MessageEmbed()
+  if (answered == 'true') {
+
+  } else if (answered == 'false') {
+  
+  }
+
+  const questionEmbed = new Discord.MessageEmbed()
     .setColor('#7ed6df')
     .setTitle('Trivia question!')
     .setDescription(botQuestion);
