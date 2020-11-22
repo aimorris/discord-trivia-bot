@@ -31,7 +31,8 @@ client.on('message', async msg => {
     // Stops old interval
     clearInterval(botQuestions);
 
-    addToScore(msg.member.id, 1);
+    // addToScore(msg.member.id, 1);
+    memberExists(msg.member.id);
 
     answered = 'true';
     answerer = msg.member;
@@ -112,10 +113,7 @@ function memberExists(member) {
   return new Promise(resolve => {
     MongoClient.connect(mongoUri, (err, db) => {
       const exists = db.collection('users').findOne({ 'user' : member }, { '_id' : 1 });
-      exists.toArray((e, res) => {
-        if (e) console.error(e);
-        resolve(res.length > 0);
-      });
+      console.log(exists);
       db.close();
     });
   });
