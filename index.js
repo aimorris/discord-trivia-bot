@@ -45,6 +45,9 @@ async function botNewQuestion() {
   botQuestion = newQuestion[0];
   botAnswers = newQuestion[1];
 
+  console.log(answered);
+  console.log(answerer);
+
   if (answered == 'true') {
     const answeredEmbed = new Discord.MessageEmbed()
       .setColor('#6ab04c')
