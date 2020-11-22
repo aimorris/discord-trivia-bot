@@ -31,6 +31,10 @@ client.on('message', msg => {
     // Stops old interval
     clearInterval(botQuestions);
 
+    // addToScore(msg.member.id, 1);
+
+    console.log(checkMemberExists(msg.member.id));
+
     answered = 'true';
     answerer = msg.member.displayName;
 
@@ -83,5 +87,26 @@ function fetchBotQuestion() {
       });
       db.close();
     });
+  });
+}
+
+function addToScore(member, amt) {
+  MongoClient.connect(mongoUri, (err, db) => {
+    db.collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
+    db.close();
+  });
+}
+
+function addMember(member) {
+  MongoClient.connect(mongoUri, (err, db) => {
+    db.collection('users');
+    db.close();
+  });
+}
+
+function checkMemberExists(member) {
+  MongoClient.connect(mongoUri, (err, db) => {
+    db.collection('users').find({ 'user' : member }, { '_id' : 1 });
+    db.close();
   });
 }
