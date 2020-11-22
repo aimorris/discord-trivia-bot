@@ -66,8 +66,7 @@ async function botNewQuestion() {
 
   const questionEmbed = new Discord.MessageEmbed()
     .setColor('#7ed6df')
-    .setTitle('Trivia question!')
-    .setDescription(botQuestion);
+    .setTitle(botQuestion);
 
   // Sends the trivia question to the #bot-trivia channel
   botTriviaChannel.send(questionEmbed);
