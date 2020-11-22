@@ -19,20 +19,18 @@ client.once('ready', () => {
   botTriviaChannel = client.channels.cache.get('779241835649957939');
 
   // Starts sending questions to #bot-trivia
+  botNewQuestion();
   botQuestions = setInterval(botNewQuestion, botTimeout);
 });
 
 client.on('message', msg => {
   if (botAnswers.includes(msg.content)) {
-    console.log('correct');
     // Stops old interval
     clearInterval(botQuestions);
 
     // Starts new interval
+    botNewQuestion();
     botQuestions = setInterval(botNewQuestion, botTimeout);
-  }
-  else {
-    console.log('incorrect');
   }
 });
 
