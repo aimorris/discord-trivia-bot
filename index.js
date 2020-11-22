@@ -24,11 +24,15 @@ client.once('ready', () => {
 
 client.on('message', msg => {
   if (botAnswers.includes(msg.content)) {
+    console.log('correct');
     // Stops old interval
     clearInterval(botQuestions);
 
     // Starts new interval
     botQuestions = setInterval(botNewQuestion, botTimeout);
+  }
+  else {
+    console.log('incorrect');
   }
 });
 
@@ -48,8 +52,6 @@ function fetchBotQuestion() {
       const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]);
       newQuestion.toArray((e, res) => {
         if (e) console.error(e);
-        console.log(res[0]['answers']);
-
         resolve([res[0]['question'], res[0]['answers']]);
       });
       db.close();
