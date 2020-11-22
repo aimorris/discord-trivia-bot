@@ -91,14 +91,12 @@ function fetchBotQuestion() {
 async function addToScore(member, amt) {
   const exists = await memberExists(member);
   if (exists) {
-    console.log('adding to score');
     MongoClient.connect(mongoUri, (err, db) => {
       db.collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
       db.close();
     });
   }
   else {
-    console.log('adding member');
     await addMember(member);
     addToScore(member, amt);
   }
@@ -107,7 +105,8 @@ async function addToScore(member, amt) {
 function addMember(member) {
   return new Promise(resolve => {
     MongoClient.connect(mongoUri, (err, db) => {
-      db.collection('users').insertOne({ 'user' : member, ' score ' : 0 });
+      db.collection('users').insertOne({ 'user' : member, 'score' : 0 });
+      resolve('added member');
       db.close();
     });
   });
