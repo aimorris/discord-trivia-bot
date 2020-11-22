@@ -111,8 +111,8 @@ function addMember(member) {
 
 function memberExists(member) {
   return new Promise(resolve => {
-    MongoClient.connect(mongoUri, (err, db) => {
-      const exists = db.collection('users').findOne({ 'user' : member }, { '_id' : 1 });
+    MongoClient.connect(mongoUri, async (err, db) => {
+      const exists = await db.collection('users').findOne({ 'user' : member });
       console.log(exists);
       db.close();
     });
