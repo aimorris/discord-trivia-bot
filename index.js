@@ -41,7 +41,7 @@ async function botNewQuestion() {
   botAnswers = newQuestion[1];
 
   // Sends the trivia question to the #bot-trivia channel
-  botTriviaChannel.send(botQuestion);
+  botTriviaChannel.send(questionEmbed);
 }
 
 function fetchBotQuestion() {
@@ -56,3 +56,8 @@ function fetchBotQuestion() {
     });
   });
 }
+
+const questionEmbed = new Discord.MessageEmbed()
+  .setColor('#7ed6df')
+  .setTitle('Trivia question!')
+  .setDescription(botQuestion);
