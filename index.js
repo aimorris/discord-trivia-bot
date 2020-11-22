@@ -89,22 +89,27 @@ function fetchBotQuestion() {
 }
 
 async function addToScore(member, amt) {
-  if (memberExists(member)) {
+  const exists = await memberExists(member);
+  if (exists) {
+    console.log('adding to score');
     MongoClient.connect(mongoUri, (err, db) => {
       db.collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
       db.close();
     });
   }
   else {
+    console.log('adding member');
     await addMember(member);
     addToScore(member, amt);
   }
 }
 
 function addMember(member) {
-  MongoClient.connect(mongoUri, (err, db) => {
-    db.collection('users').insertOne({ 'user' : member, ' score ' : 0 });
-    db.close();
+  return new Promise(resolve => {
+    MongoClient.connect(mongoUri, (err, db) => {
+      db.collection('users').insertOne({ 'user' : member, ' score ' : 0 });
+      db.close();
+    });
   });
 }
 
