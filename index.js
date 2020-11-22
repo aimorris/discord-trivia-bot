@@ -40,6 +40,11 @@ async function botNewQuestion() {
   botQuestion = newQuestion[0];
   botAnswers = newQuestion[1];
 
+  let questionEmbed = new Discord.MessageEmbed()
+    .setColor('#7ed6df')
+    .setTitle('Trivia question!')
+    .setDescription(botQuestion);
+
   // Sends the trivia question to the #bot-trivia channel
   botTriviaChannel.send(questionEmbed);
 }
@@ -56,8 +61,3 @@ function fetchBotQuestion() {
     });
   });
 }
-
-const questionEmbed = new Discord.MessageEmbed()
-  .setColor('#7ed6df')
-  .setTitle('Trivia question!')
-  .setDescription(botQuestion);
