@@ -8,7 +8,7 @@ client.login(token.token);
 
 let botTriviaChannel;
 let botQuestions;
-const botTimeout = 1000;
+const botTimeout = 10000;
 
 let botQuestion;
 let botAnswers;
