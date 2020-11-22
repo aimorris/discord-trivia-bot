@@ -31,6 +31,7 @@ client.on('message', msg => {
     // Stops old interval
     clearInterval(botQuestions);
 
+    answered = 'true';
     answerer = msg.member.displayName;
 
     // Starts new interval
@@ -45,23 +46,20 @@ async function botNewQuestion() {
   botQuestion = newQuestion[0];
   botAnswers = newQuestion[1];
 
-  console.log(answered);
-  console.log(answerer);
-
   if (answered == 'true') {
     const answeredEmbed = new Discord.MessageEmbed()
       .setColor('#6ab04c')
       .setTitle('Well done, ' + answerer + '!')
       .setDescription('1 point has been added to your score on the <#779461499113439243>.');
 
-    botTriviaChannel.send(answeredEmbed);
+    await botTriviaChannel.send(answeredEmbed);
   }
   else if (answered == 'false') {
     const notAnsweredEmbed = new Discord.MessageEmbed()
       .setColor('#eb4d4b')
       .setTitle('No one answered');
 
-    botTriviaChannel.send(notAnsweredEmbed);
+    await botTriviaChannel.send(notAnsweredEmbed);
   }
 
   const questionEmbed = new Discord.MessageEmbed()
@@ -69,7 +67,10 @@ async function botNewQuestion() {
     .setTitle(botQuestion);
 
   // Sends the trivia question to the #bot-trivia channel
-  botTriviaChannel.send(questionEmbed);
+  await botTriviaChannel.send(questionEmbed);
+
+  answered = 'false';
+  answerer = null;
 }
 
 function fetchBotQuestion() {
