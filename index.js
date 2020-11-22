@@ -32,21 +32,27 @@ client.on('message', msg => {
   }
 });
 
-const botNewQuestion = () => {
-  fetchBotQuestion();
+async function botNewQuestion() {
+  const newQuestion = await fetchBotQuestion();
+
+  botQuestion = newQuestion[0];
+  botAnswers = newQuestion[1];
 
   // Sends the trivia question to the #bot-trivia channel
   botTriviaChannel.send(botQuestion);
-};
+}
 
-const fetchBotQuestion = () => {
-  MongoClient.connect(mongoUri, (err, db) => {
-    const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]);
-    newQuestion.toArray((e, res) => {
-      if (e) console.error(e);
-      botQuestion = res[0]['question'];
-      botAnswers = res[0]['answers'];
+function fetchBotQuestion() {
+  return new Promise(resolve => {
+    MongoClient.connect(mongoUri, (err, db) => {
+      const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]);
+      newQuestion.toArray((e, res) => {
+        if (e) console.error(e);
+        console.log(res[0]['answers']);
+
+        resolve([res[0]['question'], res[0]['answers']]);
+      });
+      db.close();
     });
-    db.close();
   });
-};
+}
