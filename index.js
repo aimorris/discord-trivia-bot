@@ -26,17 +26,17 @@ client.once('ready', () => {
   botQuestions = setInterval(botNewQuestion, botTimeout);
 });
 
-client.on('message', msg => {
+client.on('message', async msg => {
   if (botAnswers.includes(msg.content)) {
     // Stops old interval
     clearInterval(botQuestions);
 
     // addToScore(msg.member.id, 1);
-
-    console.log(checkMemberExists(msg.member.id));
+    const exists = await memberExists(msg.member.id);
+    console.log(exists);
 
     answered = 'true';
-    answerer = msg.member.displayName;
+    answerer = msg.member;
 
     // Starts new interval
     botNewQuestion();
@@ -53,8 +53,8 @@ async function botNewQuestion() {
   if (answered == 'true') {
     const answeredEmbed = new Discord.MessageEmbed()
       .setColor('#6ab04c')
-      .setTitle('Well done, ' + answerer + '!')
-      .setDescription('1 point has been added to your score on the <#779461499113439243>.');
+      .setTitle('Correct!')
+      .setDescription('<@' + answerer.id + '> 1 point has been added to your score on the <#779461499113439243>.');
 
     await botTriviaChannel.send(answeredEmbed);
   }
@@ -104,9 +104,11 @@ function addMember(member) {
   });
 }
 
-function checkMemberExists(member) {
-  MongoClient.connect(mongoUri, (err, db) => {
-    db.collection('users').find({ 'user' : member }, { '_id' : 1 });
-    db.close();
+function memberExists(member) {
+  return new Promise(resolve => {
+    MongoClient.connect(mongoUri, (err, db) => {
+      resolve(db.collection('users').find({ 'user' : member }, { '_id' : 1 }));
+      db.close();
+    });
   });
 }
