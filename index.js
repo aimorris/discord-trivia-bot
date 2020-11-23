@@ -17,9 +17,9 @@ let answered = 'first';
 let answerer;
 
 // After the bot is logged in and ready
-client.once('ready', () => {
+client.once('ready', async () => {
   // Gets the #bot-trivia channel
-  botTriviaChannel = client.channels.cache.get('779241835649957939');
+  botTriviaChannel = await client.channels.fetch('779241835649957939');
 
   // Starts sending questions to #bot-trivia
   botNewQuestion();
