@@ -38,6 +38,12 @@ client.on('message', async msg => {
     answered = 'true';
     answerer = msg.member;
 
+    if (answered == 'true') {
+      await botTriviaChannel.send(embeds.correct(answerer));
+    } else if (answered == 'false') {
+      await botTriviaChannel.send(embeds.notAnswered());
+    }
+
     // Starts new bot trivia question
     botNewQuestion();
     botQuestions = setInterval(botNewQuestion, botTimeout);
@@ -49,12 +55,6 @@ async function botNewQuestion() {
 
   botQuestion = newQuestion[0];
   botAnswers = newQuestion[1];
-
-  if (answered == 'true') {
-    await botTriviaChannel.send(embeds.correct(answerer));
-  } else if (answered == 'false') {
-    await botTriviaChannel.send(embeds.notAnswered());
-  }
 
   // Sends the trivia question to the #bot-trivia channel
   await botTriviaChannel.send(embeds.botQuestion(botQuestion));
