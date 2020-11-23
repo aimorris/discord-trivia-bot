@@ -1,3 +1,8 @@
-const { clearWeekly } = require('./mongo');
+const { clearWeekly, mongoConnect } = require('./mongo');
 
-clearWeekly();
+async function clearScores() {
+  await mongoConnect();
+  await clearWeekly();
+}
+
+clearScores();
