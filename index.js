@@ -32,7 +32,7 @@ client.on('message', async msg => {
     // Stops old interval
     clearInterval(botQuestions);
 
-    addToScore(msg.member.id, 1);
+    // addToScore(msg.member.id, 1);
 
     answered = 'true';
     answerer = msg.member;
