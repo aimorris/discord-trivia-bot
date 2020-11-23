@@ -21,7 +21,7 @@ let answerer;
 client.once('ready', async () => {
   // Gets the #bot-trivia channel
   botTriviaChannel = await client.channels.fetch('779241835649957939');
-  mongoConnect();
+  await mongoConnect();
 
   // Starts sending questions to #bot-trivia
   botNewQuestion();
