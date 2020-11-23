@@ -39,16 +39,16 @@ client.on('message', async msg => {
 });
 
 async function botNewQuestion(answerer) {
+  const newQuestion = await fetchBotQuestion();
+
+  botQuestion = newQuestion[0];
+  botAnswers = newQuestion[1];
+
   if (answerer) {
     await botTriviaChannel.send(embeds.correct(answerer));
   } else {
     await botTriviaChannel.send(embeds.notAnswered());
   }
-
-  const newQuestion = await fetchBotQuestion();
-
-  botQuestion = newQuestion[0];
-  botAnswers = newQuestion[1];
 
   // Sends the trivia question to the #bot-trivia channel
   await botTriviaChannel.send(embeds.botQuestion(botQuestion));
