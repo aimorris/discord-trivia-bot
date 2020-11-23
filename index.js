@@ -78,11 +78,11 @@ async function botNewQuestion() {
 
 async function fetchBotQuestion() {
   try {
-    await client.connect();
+    await mongoClient.connect();
     const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{ $sample: { size: 1 } }]);
     console.log(newQuestion);
   } finally {
-    await client.close();
+    await mongoClient.close();
   }
 }
 
