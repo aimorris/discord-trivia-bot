@@ -33,9 +33,14 @@ async function memberExists(member) {
   return !!exists;
 }
 
+async function clearWeekly() {
+  await mongoClient.db('trivia').collection('weeklyScores').drop();
+}
+
 module.exports = {
   fetchBotQuestion,
   addToScore,
   addMember,
   mongoConnect,
+  clearWeekly,
 };
