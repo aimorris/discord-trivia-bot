@@ -23,9 +23,8 @@ client.once('ready', async () => {
   botTriviaChannel = await client.channels.fetch('779241835649957939');
 
   // Starts sending questions to #bot-trivia
-  // botNewQuestion();
-  // botQuestions = setInterval(botNewQuestion, botTimeout);
-  fetchBotQuestion();
+  botNewQuestion();
+  botQuestions = setInterval(botNewQuestion, botTimeout);
 });
 
 client.on('message', async msg => {
@@ -80,7 +79,7 @@ async function fetchBotQuestion() {
   try {
     await mongoClient.connect();
     const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{ $sample: { size: 1 } }]).toArray();
-    console.log(newQuestion);
+    return(newQuestion[0]['question'], newQuestion[0]['answers']);
   } finally {
     await mongoClient.close();
   }
@@ -89,32 +88,33 @@ async function fetchBotQuestion() {
 async function addToScore(member, amt) {
   const exists = await memberExists(member);
   if (exists) {
-    MongoClient.connect(mongoUri, (err, db) => {
-      db.collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
-      db.close();
-    });
+    try {
+      await mongoClient.connect();
+      await mongoClient.db('trivia').collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
+    } finally {
+      await mongoClient.close();
+    }
   } else {
     await addMember(member);
     addToScore(member, amt);
   }
 }
 
-function addMember(member) {
-  return new Promise(resolve => {
-    MongoClient.connect(mongoUri, (err, db) => {
-      db.collection('users').insertOne({ 'user' : member, 'score' : 0 });
-      resolve('added member');
-      db.close();
-    });
-  });
+async function addMember(member) {
+  try {
+    await mongoClient.connect();
+    await mongoClient.db('trivia').collection('users').insertOne({ 'user' : member, 'score' : 0 });
+  } finally {
+    await mongoClient.close();
+  }
 }
 
-function memberExists(member) {
-  return new Promise(resolve => {
-    MongoClient.connect(mongoUri, async (err, db) => {
-      const exists = await db.collection('users').findOne({ 'user' : member });
-      resolve(!!exists);
-      db.close();
-    });
-  });
+async function memberExists(member) {
+  try {
+    await mongoClient.connect();
+    const exists = await mongoClient.db('trivia').collection('users').findOne({ 'user' : member });
+    return !!exists;
+  } finally {
+    await mongoClient.close();
+  }
 }
