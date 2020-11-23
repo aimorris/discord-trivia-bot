@@ -57,5 +57,5 @@ async function botNewQuestion(answerer) {
 
 async function updateLeaderboard() {
   // const leaderboardChannel = await client.channels.fetch('779461499113439243');
-  console.log(fetchTopTen('weeklyScores'));
+  console.log(await fetchTopTen('weeklyScores'));
 }
