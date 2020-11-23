@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { MongoClient } = require('mongodb');
 const token = require('./token.json');
 const mongoUri = 'mongodb://admin:password@localhost:27017?authSource=admin';
-const mongoClient = new MongoClient(mongoUri, { useUnifiedTopology: true });
+const mongoClient = new MongoClient(mongoUri);
 
 const client = new Discord.Client();
 client.login(token.token);
