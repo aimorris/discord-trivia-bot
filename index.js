@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { MongoClient } = require('mongodb');
 const token = require('./token.json');
 const mongoUri = 'mongodb://admin:password@localhost:27017?authSource=admin';
-const mongoClient = new MongoClient(mongoUri);
+const mongoClient = new MongoClient(mongoUri, { useUnifiedTopology: true });
 
 const client = new Discord.Client();
 client.login(token.token);
@@ -80,7 +80,7 @@ async function fetchBotQuestion() {
   try {
     await mongoClient.connect();
     const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{ $sample: { size: 1 } }]);
-    console.log(newQuestion.toArray());
+    console.log(newQuestion);
   } finally {
     await mongoClient.close();
   }
