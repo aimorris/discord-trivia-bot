@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
-const { MongoClient } = require('mongodb');
+const { mongoConnect, fetchBotQuestion, addToScore } = require('./mongo');
 const token = require('./token.json');
-const mongoUri = 'mongodb://admin:password@localhost:27017?authSource=admin';
-const mongoClient = new MongoClient(mongoUri, { useUnifiedTopology: true });
 
 const client = new Discord.Client();
 client.login(token.token);
@@ -21,7 +19,7 @@ let answerer;
 client.once('ready', async () => {
   // Gets the #bot-trivia channel
   botTriviaChannel = await client.channels.fetch('779241835649957939');
-  await mongoClient.connect();
+  mongoConnect();
 
   // Starts sending questions to #bot-trivia
   botNewQuestion();
@@ -74,28 +72,4 @@ async function botNewQuestion() {
 
   answered = 'false';
   answerer = null;
-}
-
-async function fetchBotQuestion() {
-  const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{ $sample: { size: 1 } }]).toArray();
-  return [newQuestion[0]['question'], newQuestion[0]['answers']];
-}
-
-async function addToScore(member, amt) {
-  const exists = await memberExists(member);
-  if (exists) {
-    await mongoClient.db('trivia').collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
-  } else {
-    await addMember(member);
-    addToScore(member, amt);
-  }
-}
-
-async function addMember(member) {
-  await mongoClient.db('trivia').collection('users').insertOne({ 'user' : member, 'score' : 0 });
-}
-
-async function memberExists(member) {
-  const exists = await mongoClient.db('trivia').collection('users').findOne({ 'user' : member });
-  return !!exists;
 }
