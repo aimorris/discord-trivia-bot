@@ -33,7 +33,7 @@ client.on('message', async msg => {
     // Stops old interval
     clearInterval(botQuestions);
 
-    // addToScore(msg.member.id, 1);
+    addToScore(msg.member.id, 1);
 
     answered = 'true';
     answerer = msg.member;
@@ -84,12 +84,7 @@ async function fetchBotQuestion() {
 async function addToScore(member, amt) {
   const exists = await memberExists(member);
   if (exists) {
-    try {
-      await mongoClient.connect();
-      await mongoClient.db('trivia').collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
-    } finally {
-      await mongoClient.close();
-    }
+    await mongoClient.db('trivia').collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
   } else {
     await addMember(member);
     addToScore(member, amt);
@@ -97,20 +92,10 @@ async function addToScore(member, amt) {
 }
 
 async function addMember(member) {
-  try {
-    await mongoClient.connect();
-    await mongoClient.db('trivia').collection('users').insertOne({ 'user' : member, 'score' : 0 });
-  } finally {
-    await mongoClient.close();
-  }
+  await mongoClient.db('trivia').collection('users').insertOne({ 'user' : member, 'score' : 0 });
 }
 
 async function memberExists(member) {
-  try {
-    await mongoClient.connect();
-    const exists = await mongoClient.db('trivia').collection('users').findOne({ 'user' : member });
-    return !!exists;
-  } finally {
-    await mongoClient.close();
-  }
+  const exists = await mongoClient.db('trivia').collection('users').findOne({ 'user' : member });
+  return !!exists;
 }
