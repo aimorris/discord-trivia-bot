@@ -44,7 +44,7 @@ client.on('message', async msg => {
 });
 
 async function botNewQuestion() {
-  const newQuestion = await fetchBotQuestion();
+  const newQuestion = fetchBotQuestion();
 
   botQuestion = newQuestion[0];
   botAnswers = newQuestion[1];
