@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { MongoClient } = require('mongodb');
 const token = require('./token.json');
-const mongoUri = 'mongodb://admin:password@localhost:27017/trivia?authSource=admin';
+const mongoUri = 'mongodb://admin:password@localhost:27017?authSource=admin';
 
 const client = new Discord.Client();
 client.login(token.token);
