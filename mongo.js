@@ -15,7 +15,8 @@ async function fetchBotQuestion() {
 async function addToScore(member, amt) {
   const exists = await memberExists(member);
   if (exists) {
-    await mongoClient.db('trivia').collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
+    await mongoClient.db('trivia').collection('totalScores').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
+    await mongoClient.db('trivia').collection('weeklyScores').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
   } else {
     await addMember(member);
     addToScore(member, amt);
@@ -23,11 +24,12 @@ async function addToScore(member, amt) {
 }
 
 async function addMember(member) {
-  await mongoClient.db('trivia').collection('users').insertOne({ 'user' : member, 'score' : 0 });
+  await mongoClient.db('trivia').collection('totalScores').insertOne({ 'user' : member, 'score' : 0 });
+  await mongoClient.db('trivia').collection('weeklyScores').insertOne({ 'user' : member, 'score' : 0 });
 }
 
 async function memberExists(member) {
-  const exists = await mongoClient.db('trivia').collection('users').findOne({ 'user' : member });
+  const exists = await mongoClient.db('trivia').collection('weeklyScores').findOne({ 'user' : member });
   return !!exists;
 }
 
