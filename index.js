@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const { mongoConnect, fetchBotQuestion, addToScore } = require('./mongo');
+const embeds = require('./embeds.js');
+
 const token = require('./token.json');
 
 const client = new Discord.Client();
@@ -28,7 +30,7 @@ client.once('ready', async () => {
 
 client.on('message', async msg => {
   if (botAnswers.includes(msg.content)) {
-    // Stops old interval
+    // Stops old bot trivia question
     clearInterval(botQuestions);
 
     addToScore(msg.member.id, 1);
@@ -36,7 +38,7 @@ client.on('message', async msg => {
     answered = 'true';
     answerer = msg.member;
 
-    // Starts new interval
+    // Starts new bot trivia question
     botNewQuestion();
     botQuestions = setInterval(botNewQuestion, botTimeout);
   }
@@ -49,26 +51,13 @@ async function botNewQuestion() {
   botAnswers = newQuestion[1];
 
   if (answered == 'true') {
-    const answeredEmbed = new Discord.MessageEmbed()
-      .setColor('#6ab04c')
-      .setTitle('Correct!')
-      .setDescription('<@' + answerer.id + '> 1 point has been added to your score on the <#779461499113439243>.');
-
-    await botTriviaChannel.send(answeredEmbed);
+    await botTriviaChannel.send(embeds.correct(answerer));
   } else if (answered == 'false') {
-    const notAnsweredEmbed = new Discord.MessageEmbed()
-      .setColor('#eb4d4b')
-      .setTitle('No one answered');
-
-    await botTriviaChannel.send(notAnsweredEmbed);
+    await botTriviaChannel.send(embeds.notAnswered());
   }
 
-  const questionEmbed = new Discord.MessageEmbed()
-    .setColor('#7ed6df')
-    .setTitle(botQuestion);
-
   // Sends the trivia question to the #bot-trivia channel
-  await botTriviaChannel.send(questionEmbed);
+  await botTriviaChannel.send(embeds.botQuestion(botQuestion));
 
   answered = 'false';
   answerer = null;
