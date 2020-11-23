@@ -14,9 +14,6 @@ const botTimeout = 10000;
 let botQuestion;
 let botAnswers;
 
-let answered = 'first';
-let answerer;
-
 // After the bot is logged in and ready
 client.once('ready', async () => {
   // Gets the #bot-trivia channel
@@ -24,8 +21,8 @@ client.once('ready', async () => {
   await mongoConnect();
 
   // Starts sending questions to #bot-trivia
-  botNewQuestion();
-  botQuestions = setInterval(botNewQuestion, botTimeout);
+  botNewQuestion(null);
+  botQuestions = setInterval(botNewQuestion, botTimeout, null);
 });
 
 client.on('message', async msg => {
@@ -35,22 +32,19 @@ client.on('message', async msg => {
 
     addToScore(msg.member.id, 1);
 
-    answered = 'true';
-    answerer = msg.member;
-
-    if (answered == 'true') {
-      await botTriviaChannel.send(embeds.correct(answerer));
-    } else if (answered == 'false') {
-      await botTriviaChannel.send(embeds.notAnswered());
-    }
-
     // Starts new bot trivia question
-    botNewQuestion();
-    botQuestions = setInterval(botNewQuestion, botTimeout);
+    botNewQuestion(msg.member);
+    botQuestions = setInterval(botNewQuestion, botTimeout, null);
   }
 });
 
-async function botNewQuestion() {
+async function botNewQuestion(answerer) {
+  if (answerer) {
+    await botTriviaChannel.send(embeds.correct(answerer));
+  } else {
+    await botTriviaChannel.send(embeds.notAnswered());
+  }
+
   const newQuestion = await fetchBotQuestion();
 
   botQuestion = newQuestion[0];
@@ -58,7 +52,4 @@ async function botNewQuestion() {
 
   // Sends the trivia question to the #bot-trivia channel
   await botTriviaChannel.send(embeds.botQuestion(botQuestion));
-
-  answered = 'false';
-  answerer = null;
 }
