@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
-const MongoClient = require('mongodb').MongoClient;
+const { MongoClient } = require('mongodb');
 const token = require('./token.json');
 const mongoUri = 'mongodb://admin:password@localhost:27017?authSource=admin';
+const mongoClient = new MongoClient(mongoUri);
 
 const client = new Discord.Client();
 client.login(token.token);
@@ -22,8 +23,9 @@ client.once('ready', async () => {
   botTriviaChannel = await client.channels.fetch('779241835649957939');
 
   // Starts sending questions to #bot-trivia
-  botNewQuestion();
-  botQuestions = setInterval(botNewQuestion, botTimeout);
+  // botNewQuestion();
+  // botQuestions = setInterval(botNewQuestion, botTimeout);
+  fetchBotQuestion();
 });
 
 client.on('message', async msg => {
@@ -55,8 +57,7 @@ async function botNewQuestion() {
       .setDescription('<@' + answerer.id + '> 1 point has been added to your score on the <#779461499113439243>.');
 
     await botTriviaChannel.send(answeredEmbed);
-  }
-  else if (answered == 'false') {
+  } else if (answered == 'false') {
     const notAnsweredEmbed = new Discord.MessageEmbed()
       .setColor('#eb4d4b')
       .setTitle('No one answered');
@@ -75,17 +76,14 @@ async function botNewQuestion() {
   answerer = null;
 }
 
-function fetchBotQuestion() {
-  return new Promise(resolve => {
-    MongoClient.connect(mongoUri, (err, db) => {
-      const newQuestion = db.collection('questions').aggregate([{ $sample: { size: 1 } }]);
-      newQuestion.toArray((e, res) => {
-        if (e) console.error(e);
-        resolve([res[0]['question'], res[0]['answers']]);
-      });
-      db.close();
-    });
-  });
+async function fetchBotQuestion() {
+  try {
+    await client.connect();
+    const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{ $sample: { size: 1 } }]);
+    console.log(newQuestion);
+  } finally {
+    await client.close();
+  }
 }
 
 async function addToScore(member, amt) {
@@ -95,8 +93,7 @@ async function addToScore(member, amt) {
       db.collection('users').updateOne({ 'user' : member }, { $inc : { 'score' : amt } });
       db.close();
     });
-  }
-  else {
+  } else {
     await addMember(member);
     addToScore(member, amt);
   }
