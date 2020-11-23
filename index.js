@@ -23,8 +23,9 @@ client.once('ready', async () => {
   botTriviaChannel = await client.channels.fetch('779241835649957939');
 
   // Starts sending questions to #bot-trivia
-  botNewQuestion();
-  botQuestions = setInterval(botNewQuestion, botTimeout);
+  // botNewQuestion();
+  // botQuestions = setInterval(botNewQuestion, botTimeout);
+  fetchBotQuestion();
 });
 
 client.on('message', async msg => {
@@ -79,6 +80,7 @@ async function fetchBotQuestion() {
   try {
     await mongoClient.connect();
     const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{ $sample: { size: 1 } }]).toArray();
+    console.log(newQuestion[0]['question'], newQuestion[0]['answers']);
     return(newQuestion[0]['question'], newQuestion[0]['answers']);
   } finally {
     await mongoClient.close();
