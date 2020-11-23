@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
+const { mongoUri } = require('./secrets.json');
 
-const mongoUri = 'mongodb://admin:password@localhost:27017?authSource=admin';
 const mongoClient = new MongoClient(mongoUri, { useUnifiedTopology: true });
 
 async function mongoConnect() {

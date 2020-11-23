@@ -2,10 +2,10 @@ const Discord = require('discord.js');
 const { mongoConnect, fetchBotQuestion, addToScore } = require('./mongo');
 const embeds = require('./embeds.js');
 
-const token = require('./token.json');
+const { token } = require('./secrets.json');
 
 const client = new Discord.Client();
-client.login(token.token);
+client.login(token);
 
 let botTriviaChannel;
 let botQuestions;
