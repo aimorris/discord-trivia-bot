@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { mongoConnect, fetchBotQuestion, addToScore } = require('./mongo');
+const { mongoConnect, fetchBotQuestion, addToScore, fetchTopTen } = require('./mongo');
 const embeds = require('./embeds.js');
 
 const { token } = require('./secrets.json');
@@ -14,6 +14,8 @@ const botTimeout = 10000;
 let botQuestion;
 let botAnswers = [];
 
+const leaderboardUpdatePeriod = 10000;
+
 // After the bot is logged in and ready
 client.once('ready', async () => {
   // Gets the #bot-trivia channel
@@ -23,6 +25,9 @@ client.once('ready', async () => {
   // Starts sending questions to #bot-trivia
   botNewQuestion(null);
   botQuestions = setInterval(botNewQuestion, botTimeout, null);
+
+  updateLeaderboard();
+  setInterval(updateLeaderboard, leaderboardUpdatePeriod);
 });
 
 client.on('message', async msg => {
@@ -48,4 +53,9 @@ async function botNewQuestion(answerer) {
 
   // Sends the trivia question to the #bot-trivia channel
   await botTriviaChannel.send(embeds.botQuestion(botQuestion));
+}
+
+async function updateLeaderboard() {
+  // const leaderboardChannel = await client.channels.fetch('779461499113439243');
+  console.log(fetchTopTen('weeklyScores'));
 }

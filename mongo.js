@@ -41,6 +41,10 @@ async function clearWeekly() {
   await mongoClient.db('trivia').collection('weeklyScores').drop();
 }
 
+async function fetchTopTen(collection) {
+  return await mongoClient.db('trivia').collection(collection).aggregate([{ $sort: { 'score' : -1 } }, { $limit: 10 }]).toArray();
+}
+
 module.exports = {
   fetchBotQuestion,
   addToScore,
@@ -48,4 +52,5 @@ module.exports = {
   mongoConnect,
   clearWeekly,
   mongoDisconnect,
+  fetchTopTen,
 };
