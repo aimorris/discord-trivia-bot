@@ -7,6 +7,10 @@ async function mongoConnect() {
   await mongoClient.connect();
 }
 
+async function mongoDisconnect() {
+  await mongoClient.close();
+}
+
 async function fetchBotQuestion() {
   const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{ $sample: { size: 1 } }]).toArray();
   return [newQuestion[0]['question'], newQuestion[0]['answers']];
@@ -43,4 +47,5 @@ module.exports = {
   addMember,
   mongoConnect,
   clearWeekly,
+  mongoDisconnect,
 };
