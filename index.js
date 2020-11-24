@@ -82,12 +82,12 @@ async function updateLeaderboard() {
   }
 
   const leaderboardEmbed = new Discord.MessageEmbed()
-    .addField('\u200B', '__**Weekly Leaderboard**__')
+    .addField('', '__**Weekly Leaderboard**__')
     .setColor('#7ed6df')
     .addField('User', weeklyUsers, true)
     .addField('Score', weeklyScores, true)
     .addField('\u200B', '\u200B')
-    .addField('\u200B', '__**All-Time Leaderboard**__')
+    .addField('', '__**All-Time Leaderboard**__')
     .addField('User', totalUsers, true)
     .addField('Score', totalScores, true);
 
