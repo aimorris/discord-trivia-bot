@@ -59,12 +59,16 @@ async function updateLeaderboard() {
   const weeklyUserObjs = await fetchTopTen('weeklyScores');
   const totalUserObjs = await fetchTopTen('totalScores');
 
-  const leaderboardMessages = await leaderboardChannel.messages.fetch({ limit: 1 });
-  const lastLeaderboardMessage = await leaderboardMessages.first();
+  await leaderboardChannel.messages.fetch({ limit: 1 }).then(async messages => {
+    const lastLeaderboardMessage = messages.first();
 
-  console.log(lastLeaderboardMessage);
+    if (lastLeaderboardMessage) {
+      await leaderboardChannel.edit(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
+    } else {
+      await leaderboardChannel.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs)); 
+    }
 
-  await leaderboardChannel.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
+  }).catch(console.error);
 
   setTimeout(updateLeaderboard, leaderboardUpdatePeriod);
 }
