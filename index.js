@@ -57,10 +57,10 @@ async function botNewQuestion(answerer) {
 async function updateLeaderboard() {
   const leaderboardChannel = await client.channels.fetch('779461499113439243');
   const weeklyUserObjs = await fetchTopTen('weeklyScores');
-  const topUserObjs = await fetchTopTen('topScores');
+  // const topUserObjs = await fetchTopTen('weekly');
 
   let weeklyScores = '';
-  let topScores = '';
+  // let topScores = '';
 
   for (let i = 0; i < Object.keys(weeklyUserObjs).length; i++) {
     const userId = weeklyUserObjs[i]['user'];
@@ -69,18 +69,18 @@ async function updateLeaderboard() {
     weeklyScores += `**${i + 1}** <@${userId}>\n\`${userScore}\`\n`;
   }
 
-  for (let i = 0; i < Object.keys(topUserObjs).length; i++) {
-    const userId = topUserObjs[i]['user'];
-    const userScore = topUserObjs[i]['score'];
+  // for (let i = 0; i < Object.keys(topUserObjs).length; i++) {
+  //   const userId = topUserObjs[i]['user'];
+  //   const userScore = topUserObjs[i]['score'];
 
-    topScores += `**${i + 1}** <@${userId}>\n\`${userScore}\`\n`;
-  }
+  //   topScores += `**${i + 1}** <@${userId}>\n\`${userScore}\`\n`;
+  // }
 
-  const leaderboardEmbed =  new Discord.MessageEmbed()
+  const leaderboardEmbed = new Discord.MessageEmbed()
     .setTitle('Weekly Top 10 Leaderboard')
     .setColor('#7ed6df')
-    .addField('Weekly', weeklyScores, true)
-    .addField('All-Time', topScores, true);
+    .addField('Weekly', weeklyScores, true);
+    // .addField('All-Time', topScores, true);
 
   await leaderboardChannel.send(leaderboardEmbed);
 
