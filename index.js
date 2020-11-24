@@ -59,6 +59,10 @@ async function updateLeaderboard() {
   const weeklyUserObjs = await fetchTopTen('weeklyScores');
   const totalUserObjs = await fetchTopTen('totalScores');
 
+  const lastLeaderboardMessage = await leaderboardChannel.lastMessage;
+
+  console.log(lastLeaderboardMessage);
+
   await leaderboardChannel.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
 
   setTimeout(updateLeaderboard, leaderboardUpdatePeriod);
