@@ -66,8 +66,8 @@ async function updateLeaderboard() {
     const userId = weeklyUserObjs[i]['user'];
     const userScore = weeklyUserObjs[i]['score'];
 
-    userNames += `${i + 1} <#${userId}>\n`;
-    scores += `${userScore}\n`;
+    userNames += `**${i + 1}** <@${userId}>\n`;
+    scores += `\`${userScore}\`\n`;
   }
 
   const leaderboardEmbed = new Discord.MessageEmbed()
