@@ -71,7 +71,7 @@ async function updateLeaderboard() {
     const userId = weeklyUserObjs[i]['user'];
     const userScore = weeklyUserObjs[i]['score'];
 
-    weeklyRanks += `**${i + 1}**\n`
+    weeklyRanks += `**${i + 1}.**\n`
     weeklyUsers += `<@${userId}>\n`;
     weeklyScores += `\`${userScore}\``;
   }
@@ -86,13 +86,13 @@ async function updateLeaderboard() {
   }
 
   const leaderboardEmbed = new Discord.MessageEmbed()
-    .addField('\u200B', '__**Weekly Leaderboard**__')
+    .addField('__**Weekly Leaderboard**__', '\u200B')
     .setColor('#7ed6df')
     .addField('Rank', weeklyRanks, true)
     .addField('User', weeklyUsers, true)
     .addField('Score', weeklyScores, true)
     .addField('\u200B', '\u200B')
-    .addField('\u200B', '__**All-Time Leaderboard**__')
+    .addField('__**All-Time Leaderboard**__', '\u200B')
     .addField('Rank', totalRanks, true)
     .addField('User', totalUsers, true)
     .addField('Score', totalScores, true);
