@@ -93,13 +93,12 @@ async function updateLeaderboard() {
     .addField('Score', weeklyScores, true)
     .addField('\u200B', '\u200B')
     .addField('\u200B', '\u200B')
-    .addField('\u200B', '\u200B')
     .addField('__**All-Time Leaderboard**__', '\u200B')
     .addField('Rank', totalRanks, true)
     .addField('User', totalUsers, true)
     .addField('Score', totalScores, true)
     .setTimestamp()
-    .setFooter('Updated at:');
+    .setFooter('Last Updated:');
 
   await leaderboardChannel.send(leaderboardEmbed);
 
