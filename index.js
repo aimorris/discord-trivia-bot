@@ -77,16 +77,16 @@ async function updateLeaderboard() {
     const userId = totalUserObjs[i]['user'];
     const userScore = totalUserObjs[i]['score'];
 
-    totalUsers += `**${i + 1}** <@${userId}>\n`;
+    totalUsers += `**${i + 1}.** <@${userId}>\n`;
     totalScores += `\`${userScore}\``;
   }
 
   const leaderboardEmbed = new Discord.MessageEmbed()
-    .setTitle('Weekly Leaderboard \u200B All-Time Leaderboard')
+    .setTitle('Weekly Leaderboard')
     .setColor('#7ed6df')
     .addField('User', weeklyUsers, true)
     .addField('Score', weeklyScores, true)
-    .addField('\u200B', '\u200B', true)
+    .addField('\u200B', 'All-Time Leaderboard')
     .addField('User', totalUsers, true)
     .addField('Score', totalScores, true);
 
