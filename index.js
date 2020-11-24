@@ -59,7 +59,8 @@ async function updateLeaderboard() {
   const weeklyUserObjs = await fetchTopTen('weeklyScores');
   const totalUserObjs = await fetchTopTen('totalScores');
 
-  const lastLeaderboardMessage = await leaderboardChannel.messages.fetch({ limit: 1 });
+  const leaderboardMessages = await leaderboardChannel.messages.fetch({ limit: 1 });
+  const lastLeaderboardMessage = await leaderboardMessages.first();
 
   console.log(lastLeaderboardMessage);
 
