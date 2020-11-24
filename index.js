@@ -56,6 +56,18 @@ async function botNewQuestion(answerer) {
 }
 
 async function updateLeaderboard() {
-  // const leaderboardChannel = await client.channels.fetch('779461499113439243');
-  console.log(await fetchTopTen('weeklyScores'));
+  const leaderboardChannel = await client.channels.fetch('779461499113439243');
+  const weeklyUserIds = await fetchTopTen('weeklyScores');
+
+  const topTen = [];
+
+  for (const userObj of weeklyUserIds) {
+    const userName = await client.users.fetch(userObj['user']);
+    const userScore = userObj['score'];
+
+    topTen.push([userName, userScore]);
+  }
+
+  console.log(topTen);
+
 }
