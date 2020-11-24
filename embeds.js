@@ -19,23 +19,47 @@ function botQuestion(question) {
     .setTitle(question);
 }
 
-function leaderboard(userObjs) {
-  let userNames = '';
-  let scores = '';
+function leaderboard(weeklyUserObjs, totalUserObjs) {
+  let weeklyRanks = '';
+  let weeklyUsers = '';
+  let weeklyScores = '';
 
-  for (let i = 0; i < Object.keys(userObjs).length; i++) {
-    const userId = userObjs[i]['user'];
-    const userScore = userObjs[i]['score'];
+  let totalRanks = '';
+  let totalUsers = '';
+  let totalScores = '';
 
-    userNames += `**${i + 1}** <@${userId}>\n`;
-    scores += `\`${userScore}\`\n`;
+  for (let i = 0; i < Object.keys(weeklyUserObjs).length; i++) {
+    const userId = weeklyUserObjs[i]['user'];
+    const userScore = weeklyUserObjs[i]['score'];
+
+    weeklyRanks += `**${i + 1}.**\n`
+    weeklyUsers += `<@${userId}>\n`;
+    weeklyScores += `\`${userScore}\``;
+  }
+
+  for (let i = 0; i < Object.keys(totalUserObjs).length; i++) {
+    const userId = totalUserObjs[i]['user'];
+    const userScore = totalUserObjs[i]['score'];
+
+    totalRanks += `**${i + 1}.**\n`;
+    totalUsers += `<@${userId}>\n`;
+    totalScores += `\`${userScore}\``;
   }
 
   return new Discord.MessageEmbed()
-    .setTitle('Weekly Top 10 Leaderboard')
+    .addField('__**Weekly Leaderboard**__', '\u200B')
     .setColor('#7ed6df')
-    .addField('User', userNames, true)
-    .addField('Score', scores, true);
+    .addField('Rank', weeklyRanks, true)
+    .addField('User', weeklyUsers, true)
+    .addField('Score', weeklyScores, true)
+    .addField('\u200B', '\u200B')
+    .addField('\u200B', '\u200B')
+    .addField('__**All-Time Leaderboard**__', '\u200B')
+    .addField('Rank', totalRanks, true)
+    .addField('User', totalUsers, true)
+    .addField('Score', totalScores, true)
+    .setTimestamp()
+    .setFooter('Last Updated:');
 }
 
 module.exports = {
