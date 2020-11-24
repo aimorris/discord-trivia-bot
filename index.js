@@ -65,10 +65,10 @@ async function updateLeaderboard() {
     const lastLeaderboardMessage = messages.first();
 
     if (lastLeaderboardMessage) {
-      await leaderboardChannel.edit(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
+      await lastLeaderboardMessage.edit(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
       console.log('updated leaderboard');
     } else {
-      await leaderboardChannel.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
+      await lastLeaderboardMessage.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
       console.log('sent leaderboard');
     }
 

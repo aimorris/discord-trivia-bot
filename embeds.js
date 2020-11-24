@@ -32,7 +32,7 @@ function leaderboard(weeklyUserObjs, totalUserObjs) {
     const userId = weeklyUserObjs[i]['user'];
     const userScore = weeklyUserObjs[i]['score'];
 
-    weeklyRanks += `**${i + 1}.**\n`
+    weeklyRanks += `**${i + 1}.**\n`;
     weeklyUsers += `<@${userId}>\n`;
     weeklyScores += `\`${userScore}\``;
   }
