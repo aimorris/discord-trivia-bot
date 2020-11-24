@@ -57,17 +57,24 @@ async function botNewQuestion(answerer) {
 
 async function updateLeaderboard() {
   const leaderboardChannel = await client.channels.fetch('779461499113439243');
-  const weeklyUserIds = await fetchTopTen('weeklyScores');
+  const weeklyUserObjs = await fetchTopTen('weeklyScores');
 
-  const topTen = [];
+  let userNames = '';
+  let scores = '';
 
-  for (const userObj of weeklyUserIds) {
-    const userName = await client.users.fetch(userObj['user']);
-    const userScore = userObj['score'];
+  for (let i = 0; i < Object.keys(weeklyUserObjs).length; i++) {
+    const userId = weeklyUserObjs[i]['user'];
+    const userScore = weeklyUserObjs[i]['score'];
 
-    topTen.push([userName, userScore]);
+    userNames += `${i + 1} <#${userId}>\n`;
+    scores += `${userScore}\n`;
   }
 
-  console.log(topTen);
+  const leaderboardEmbed = new Discord.MessageEmbed()
+    .setTitle('Weekly Top 10 Leaderboard')
+    .setColor('#7ed6df')
+    .addField('User', userNames, true)
+    .addField('Score', scores, true);
 
+  leaderboardChannel.send(leaderboardEmbed);
 }
