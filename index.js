@@ -30,7 +30,7 @@ client.once('ready', async () => {
 });
 
 client.on('message', async msg => {
-  if (botAnswers.includes(msg.content)) {
+  if (msg.channel.id == botTriviaChannel.id && botAnswers.includes(msg.content)) {
     // Stops old bot trivia question
     clearInterval(botQuestions);
 
