@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
-const { mongoConnect, fetchBotQuestion, addToScore, fetchTopTen } = require('./mongo');
+const {mongoConnect, fetchBotQuestion, addToScore, fetchTopTen} = require('./mongo');
 const embeds = require('./embeds.js');
 
-const { token } = require('./secrets.json');
+const {token} = require('./secrets.json');
 
 const client = new Discord.Client();
 client.login(token);
@@ -29,7 +29,7 @@ client.once('ready', async () => {
   updateLeaderboard();
 });
 
-client.on('message', async msg => {
+client.on('message', async (msg) => {
   if (msg.channel.id == botTriviaChannel.id && botAnswers.includes(msg.content)) {
     // Stops old bot trivia question
     clearInterval(botQuestions);
@@ -42,6 +42,10 @@ client.on('message', async msg => {
   }
 });
 
+/**
+ * Sends a new bot question
+ * @param {Discord.GuildMember} answerer
+ */
 async function botNewQuestion(answerer) {
   await botTriviaChannel.send(answerer ? embeds.correct(answerer) : embeds.notAnswered());
 
@@ -54,12 +58,15 @@ async function botNewQuestion(answerer) {
   await botTriviaChannel.send(embeds.botQuestion(botQuestion));
 }
 
+/**
+ * Updates the leaderboard in #leaderboard
+ */
 async function updateLeaderboard() {
   const leaderboardChannel = await client.channels.fetch('779461499113439243');
   const weeklyUserObjs = await fetchTopTen('weeklyScores');
   const totalUserObjs = await fetchTopTen('totalScores');
 
-  await leaderboardChannel.messages.fetch({ limit: 1 }).then(async messages => {
+  await leaderboardChannel.messages.fetch({limit: 1}).then(async (messages) => {
     const lastLeaderboardMessage = messages.first();
 
     if (lastLeaderboardMessage) {
@@ -67,7 +74,6 @@ async function updateLeaderboard() {
     } else {
       await leaderboardChannel.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
     }
-
   }).catch(console.error);
 
   setTimeout(updateLeaderboard, leaderboardUpdatePeriod);
