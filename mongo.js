@@ -1,7 +1,7 @@
 const {MongoClient} = require('mongodb');
-const {mongoUri} = require('./secrets.json');
+const {mongoURI} = require('./secrets.json');
 
-const mongoClient = new MongoClient(mongoUri, {useUnifiedTopology: true});
+const mongoClient = new MongoClient(mongoURI, {useUnifiedTopology: true});
 
 /**
  * Connects to the MongoDB server
