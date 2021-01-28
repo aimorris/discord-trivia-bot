@@ -18,14 +18,6 @@ async function mongoDisconnect() {
 }
 
 /**
- * Fetches a bot question from MongoDB
- */
-async function fetchBotQuestion() {
-  const newQuestion = await mongoClient.db('trivia').collection('questions').aggregate([{$sample: {size: 1}}]).toArray();
-  return [newQuestion[0]['question'], newQuestion[0]['answers']];
-}
-
-/**
  * Adds {amt} score to the member {member}
  * @param {Discord.GuildMember} member
  * @param {number} amt
@@ -75,7 +67,6 @@ async function fetchTopTen(collection) {
 }
 
 module.exports = {
-  fetchBotQuestion,
   addToScore,
   addMember,
   mongoConnect,
