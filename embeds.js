@@ -9,7 +9,7 @@ function correct(answerer) {
   return new Discord.MessageEmbed()
       .setColor('#6ab04c')
       .setTitle('Correct!')
-      .setDescription('<@' + answerer.id + '> 1 point has been added to your score on the <#779461499113439243>.');
+      .setDescription(`<@${answerer.id}> 1 point has been added to your score on the <#779461499113439243>.`);
 }
 
 /**
@@ -31,6 +31,17 @@ function botQuestion(question) {
   return new Discord.MessageEmbed()
       .setColor('#7ed6df')
       .setTitle(question);
+}
+
+/**
+ * The open asker embed
+ * @param {string} asker
+ * @return {Discord.MessageEmbed}
+ */
+function askerOpen(asker) {
+  return new Discord.MessageEmbed()
+      .setColor('#7ed6df')
+      .setTitle(`<@${asker}> failed to ask a question. Type !me to become the new asker.`);
 }
 
 /**
@@ -87,4 +98,5 @@ module.exports = {
   notAnswered,
   botQuestion,
   leaderboard,
+  askerOpen,
 };
