@@ -45,6 +45,26 @@ function askerOpen(asker) {
 }
 
 /**
+ * The bot started embed
+ * @return {Discord.MessageEmbed}
+ */
+function botStarted() {
+  return new Discord.MessageEmbed()
+      .setColor('#7ed6df')
+      .setTitle(`Bot started: ${new Date().toUTCString()}`);
+}
+
+/**
+ * The bot stopped embed
+ * @return {Discord.MessageEmbed}
+ */
+function botStopped() {
+  return new Discord.MessageEmbed()
+      .setColor('#7ed6df')
+      .setTitle(`Bot closed: ${new Date().toUTCString()}`);
+}
+
+/**
  * The leaderboard embed
  * @param {Array.<Discord.GuildMember>} weeklyUserObjs
  * @param {Array.<Discord.GuildMember>} totalUserObjs
@@ -65,7 +85,7 @@ function leaderboard(weeklyUserObjs, totalUserObjs) {
 
     weeklyRanks += `**${i + 1}.**\n`;
     weeklyUsers += `<@${userId}>\n`;
-    weeklyScores += `\`${userScore}\``;
+    weeklyScores += `\`${userScore}\`\n`;
   }
 
   for (let i = 0; i < Object.keys(totalUserObjs).length; i++) {
@@ -74,7 +94,7 @@ function leaderboard(weeklyUserObjs, totalUserObjs) {
 
     totalRanks += `**${i + 1}.**\n`;
     totalUsers += `<@${userId}>\n`;
-    totalScores += `\`${userScore}\``;
+    totalScores += `\`${userScore}\`\n`;
   }
 
   return new Discord.MessageEmbed()
@@ -99,4 +119,6 @@ module.exports = {
   botQuestion,
   leaderboard,
   askerOpen,
+  botStarted,
+  botStopped,
 };

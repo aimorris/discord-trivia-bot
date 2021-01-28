@@ -10,7 +10,7 @@ client.login(token);
 
 let botTriviaChannel;
 let botQuestionStream;
-const botTimeout = 10000;
+const botTimeout = 60000;
 
 let botQuestion;
 let botAnswers = [];
@@ -26,9 +26,12 @@ const leaderboardUpdatePeriod = 10000;
 // After the bot is logged in and ready
 client.once('ready', async () => {
   // Gets the #bot-trivia channel
-  botTriviaChannel = await client.channels.fetch('779241835649957939');
+  botTriviaChannel = await client.channels.fetch('804222341650710538');
   playerTriviaChannel = await client.channels.fetch('779460690586501120');
+  staffChatChannel = await client.channels.fetch('779242027225317377');
   await mongoConnect();
+
+  staffChatChannel.send(embeds.botStarted());
 
   // Starts sending questions to #bot-trivia
   botNewQuestion('first');
@@ -54,7 +57,8 @@ client.on('message', async (msg) => {
         numberOfMessages = parseInt(args[0]);
       }
 
-      if (!numberOfMessages || args[2] || !Number.isInteger(numberOfMessages) || !msg.member.roles.cache.has('779241416688926740')) return;
+      if (!numberOfMessages || args[2] || !Number.isInteger(numberOfMessages) || !msg.member.roles.cache.has('779241416688926740')) msg.delete();
+
       msg.channel.bulkDelete(numberOfMessages, true).then(() => {
         msg.channel.send(`Deleted ${numberOfMessages} messages.`).then((a) => a.delete({timeout: 3000}));
       });
@@ -73,10 +77,20 @@ client.on('message', async (msg) => {
       }
     }
 
+    if (command == 'stop') {
+      if (msg.member.roles.cache.has('779241416688926740')) {
+        staffChatChannel.send(embeds.botStopped());
+        await msg.delete();
+        process.exit();
+      } else {
+        msg.delete();
+      }
+    }
+
     return;
   }
 
-  if ((isBold(msg.content) && msg.author.id !== asker) || (isBold(msg.content) && msg.author.id === asker && msg.channel !== playerTriviaChannel) || (!isBold(msg.content) && msg.author.id === asker && msg.channel === playerTriviaChannel)) {
+  if ((isBold(msg.content) && msg.author.id !== asker) || (isBold(msg.content) && msg.author.id === asker && msg.channel !== playerTriviaChannel)) {
     msg.delete();
   }
 
@@ -111,7 +125,7 @@ function isBold(messageContent) {
  * @param {Discord.GuildMember} failedAsker
  */
 function openAsker(failedAsker) {
-  playerTriviaChannel.send(embeds.askerEmbed(failedAsker));
+  playerTriviaChannel.send(embeds.askerOpen(failedAsker));
 }
 
 /**
