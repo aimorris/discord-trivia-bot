@@ -1,4 +1,7 @@
 const Discord = require('discord.js');
+const green = '#6ab04c';
+const red = '#eb4d4b';
+const blue = '#7ed6df';
 
 /**
  * The correct embed
@@ -7,7 +10,7 @@ const Discord = require('discord.js');
  */
 function correct(answerer) {
   return new Discord.MessageEmbed()
-      .setColor('#6ab04c')
+      .setColor(green)
       .setTitle('Correct!')
       .setDescription(`<@${answerer.id}> 1 point has been added to your score on the <#779461499113439243>.`);
 }
@@ -18,7 +21,7 @@ function correct(answerer) {
  */
 function notAnswered() {
   return new Discord.MessageEmbed()
-      .setColor('#eb4d4b')
+      .setColor(red)
       .setTitle('No one answered');
 }
 
@@ -29,7 +32,7 @@ function notAnswered() {
  */
 function botQuestion(question) {
   return new Discord.MessageEmbed()
-      .setColor('#7ed6df')
+      .setColor(blue)
       .setTitle(question);
 }
 
@@ -40,8 +43,21 @@ function botQuestion(question) {
  */
 function askerOpen(asker) {
   return new Discord.MessageEmbed()
-      .setColor('#7ed6df')
-      .setTitle(`<@${asker}> failed to ask a question. Type !me to become the new asker.`);
+      .setColor(red)
+      .setTitle('Asker open!')
+      .setDescription(`<@${asker}> failed to ask a question. Type \`!me\` to become the new asker.`);
+}
+
+/**
+ * The open asker embed
+ * @param {string} user
+ * @return {Discord.MessageEmbed}
+ */
+function newAsker(user) {
+  return new Discord.MessageEmbed()
+      .setColor(green)
+      .setTitle('Asker claimed!')
+      .setDescription(`It is now <@${user}>'s turn to ask a question.`);
 }
 
 /**
@@ -50,7 +66,7 @@ function askerOpen(asker) {
  */
 function botStarted() {
   return new Discord.MessageEmbed()
-      .setColor('#7ed6df')
+      .setColor(blue)
       .setTitle(`Bot started: ${new Date().toUTCString()}`);
 }
 
@@ -60,8 +76,8 @@ function botStarted() {
  */
 function botStopped() {
   return new Discord.MessageEmbed()
-      .setColor('#7ed6df')
-      .setTitle(`Bot closed: ${new Date().toUTCString()}`);
+      .setColor(blue)
+      .setTitle(`Bot stopped: ${new Date().toUTCString()}`);
 }
 
 /**
@@ -99,7 +115,7 @@ function leaderboard(weeklyUserObjs, totalUserObjs) {
 
   return new Discord.MessageEmbed()
       .addField('__**Weekly Leaderboard**__', '\u200B')
-      .setColor('#7ed6df')
+      .setColor(blue)
       .addField('Rank', weeklyRanks || 'null', true)
       .addField('User', weeklyUsers || 'null', true)
       .addField('Score', weeklyScores || 'null', true)
@@ -121,4 +137,5 @@ module.exports = {
   askerOpen,
   botStarted,
   botStopped,
+  newAsker,
 };

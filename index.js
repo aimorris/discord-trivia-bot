@@ -87,6 +87,16 @@ client.on('message', async (msg) => {
       }
     }
 
+    if (command == 'me') {
+      if (asker == null) {
+        asker = msg.member.id;
+        playerTriviaChannel.send(embeds.newAsker(asker));
+        askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
+      } else {
+        msg.delete();
+      }
+    }
+
     return;
   }
 
@@ -126,6 +136,7 @@ function isBold(messageContent) {
  */
 function openAsker(failedAsker) {
   playerTriviaChannel.send(embeds.askerOpen(failedAsker));
+  asker = null;
 }
 
 /**
