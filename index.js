@@ -66,7 +66,7 @@ client.on('message', async (msg) => {
 
     if (command === 'yes') {
       const correctAnswerer = msg.mentions.users.first();
-      if (asked && correctAnswerer.id !== asker) {
+      if (asked && correctAnswerer.id !== asker && msg.channel == playerTriviaChannel) {
         asker = correctAnswerer.id;
         asked = false;
         msg.channel.send(embeds.correct(correctAnswerer));
@@ -88,7 +88,7 @@ client.on('message', async (msg) => {
     }
 
     if (command == 'me') {
-      if (asker == null) {
+      if (asker == null && msg.channel == playerTriviaChannel) {
         asker = msg.member.id;
         playerTriviaChannel.send(embeds.newAsker(asker));
         askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
