@@ -20,7 +20,7 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'In the Simpsons, what member of the Simpson family is commonly seen sucking on a pacifier?',
+    'question': 'In "The Simpsons", what member of the Simpson family is commonly seen sucking on a pacifier?',
     'answer': ['maggie', 'maggie simpsons', 'margaret'],
     'category': 'Arts & Entertainment',
   },
@@ -30,22 +30,22 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'How old was Daniel Radcliffe when the first Harry Potter film came out?',
+    'question': 'How old was Daniel Radcliffe when the first "Harry Potter" film came out?',
     'answer': ['12', 'twelve'],
     'category': 'Arts & Entertainment',
   },
   {
-    'question': 'Due to the popularity of Harry Potter, what word was added to the Oxford English dictionary in 2003?',
+    'question': 'Due to the popularity of "Harry Potter", what word was added to the Oxford English dictionary in 2003?',
     'answer': ['muggle'],
     'category': 'Arts & Entertainment',
   },
   {
-    'question': 'In the Harry Potter series, what school does Harry Potter attend?',
+    'question': 'In the "Harry Potter" series, what school does Harry Potter attend?',
     'answer': ['hogwarts', 'hogwarts school of witchcraft and wizardry'],
     'category': 'Arts & Entertainment',
   },
   {
-    'question': 'What is the fourth book in the Harry Potter series?',
+    'question': 'What is the fourth book in the "Harry Potter" series?',
     'answer': ['goblet of fire', 'harry potter and the goblet of fire', 'the goblet of fire'],
     'category': 'Arts & Entertainment',
   },
@@ -60,8 +60,8 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'Which actor played Hannibal Lecter in the Hannibal movie trilogy?',
-    'answer': ['sir anthony hopkins', 'hopkins', 'sir anthony'],
+    'question': 'Which actor played Hannibal Lecter in the "Hannibal" movie trilogy?',
+    'answer': ['sir anthony hopkins', 'anthony hopkins', 'hopkins', 'sir anthony'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -85,7 +85,7 @@ const questions = [
     'category': 'Arts & Entertainment',
   },
   {
-    'question': 'In the classic tale "Moby Dick", Moby Dick is what kind of whale?',
+    'question': 'What kind of whale is featured in the classic tale "Moby Dick"?',
     'answer': ['sperm', 'sperm whale'],
     'category': 'Arts & Entertainment',
   },
@@ -130,12 +130,12 @@ const questions = [
     'category': 'Science & Geography',
   },
   {
-    'question': 'Whih country has the same name as a bird?',
+    'question': 'Which country has the same name as a bird?',
     'answer': ['turkey'],
     'category': 'Science & Geography',
   },
   {
-    'question': 'What colour is the Art & Literature wedge in the original version of Trivial Pursuit?',
+    'question': 'What colour is the Art & Literature wedge in the original version of "Trivial Pursuit"?',
     'answer': ['brown'],
     'category': 'Arts & Entertainment',
   },
@@ -155,7 +155,7 @@ const questions = [
     'category': 'Arts & Entertainment',
   },
   {
-    'question': 'Which country did the French know as Terra Napoleon',
+    'question': 'Which country did the French know as Terra Napoleon?',
     'answer': ['australia', 'commonwealth of australia'],
     'category': 'Society & Humanities',
   },
@@ -190,7 +190,7 @@ const questions = [
     'category': 'Arts & Entertainment',
   },
   {
-    'question': 'What is the name of the metal covering on the tip of a shoelace?',
+    'question': 'What is the name of the covering on the tip of a shoelace?',
     'answer': ['aglet'],
     'category': 'Society & Humanities',
   },
@@ -215,7 +215,7 @@ const questions = [
     'category': 'Science & Geography',
   },
   {
-    'question': 'What term is given to an 11 on the Beaufort Wind Scale',
+    'question': 'What term is given to an 11 on the Beaufort Wind Scale?',
     'answer': ['violent storm'],
     'category': 'Science & Geography',
   },
@@ -225,7 +225,7 @@ const questions = [
     'category': 'Arts & Entertainment',
   },
   {
-    'question': 'Who wrote the novel The Silence of the Lambs?',
+    'question': 'Who wrote the novel "The Silence of the Lambs"?',
     'answer': ['harris', 'thomas harris'],
     'category': 'Arts & Entertainment',
   },
@@ -235,7 +235,7 @@ const questions = [
     'category': 'Science & Geography',
   },
   {
-    'question': 'What is the sequel to the novel Little Women?',
+    'question': 'What is the sequel to the novel "Little Women"?',
     'answer': ['good wives'],
     'category': 'Arts & Entertainment',
   },
@@ -260,14 +260,54 @@ const questions = [
     'category': 'Science & Geography',
   },
   {
-    'question': 'Which Zodiac sign is represented by fish',
-    'answer': ['tequila'],
+    'question': 'Which Zodiac sign is represented by fish?',
+    'answer': ['pisces'],
     'category': 'Science & Geography',
   },
   {
-    'question': 'Who played the lead in the movie The Matrix?',
+    'question': 'Who played the lead in the movie "The Matrix"?',
     'answer': ['keanu reeves', 'keanu', 'reeves'],
     'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What nerve agent was used in the assassination of Kim Jong Nam?',
+    'answer': ['sarin', 'sarin gas'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'What animal is the mascot of Coca-Cola?',
+    'answer': ['polar bear'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'In the name of the food corned beef, "corn" refers to what seasoning commonly found on dinner tables?',
+    'answer': ['salt'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'What is the language isolate with the most native speakers?',
+    'answer': ['korean'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'Which animal has the largest penis-to-body size ratio?',
+    'answer': ['barnacle'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What was the name of the built in local communication app in the Nintendo DS?',
+    'answer': ['pictochat'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What was the name of the US President before Donald Trump?',
+    'answer': ['barack obama', 'obama', 'barack'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'What is added to ginger beer to make the non-alcoholic drink Shirley Temple?',
+    'answer': ['grenadine'],
+    'category': 'Society & Humanities',
   },
 ];
 
