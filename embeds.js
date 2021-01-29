@@ -62,12 +62,15 @@ function newAsker(user) {
 
 /**
  * The bot started embed
+ * @param {number} length
  * @return {Discord.MessageEmbed}
  */
-function botStarted() {
+function botStarted(length) {
   return new Discord.MessageEmbed()
       .setColor(blue)
-      .setTitle(`Bot started: ${new Date().toUTCString()}`);
+      .setTitle('Bot started!')
+      .addField('Date: ', new Date().toUTCString(), true)
+      .addField('Questions:', length, false);
 }
 
 /**
@@ -77,7 +80,8 @@ function botStarted() {
 function botStopped() {
   return new Discord.MessageEmbed()
       .setColor(blue)
-      .setTitle(`Bot stopped: ${new Date().toUTCString()}`);
+      .setTitle('Bot stopped!')
+      .addField('Date: ', new Date().toUTCString());
 }
 
 /**

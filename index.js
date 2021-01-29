@@ -31,7 +31,7 @@ client.once('ready', async () => {
   staffChatChannel = await client.channels.fetch('779242027225317377');
   await mongoConnect();
 
-  staffChatChannel.send(embeds.botStarted());
+  staffChatChannel.send(embeds.botStarted(questions.length));
 
   // Starts sending questions to #bot-trivia
   botNewQuestion('first');
