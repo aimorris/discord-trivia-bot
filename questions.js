@@ -146,7 +146,7 @@ const questions = [
   },
   {
     'question': 'In what US state is The Grand Canyon found?',
-    'answer': ['colorado', 'co'],
+    'answer': ['arizona', 'az'],
     'category': 'Science & Geography',
   },
   {
@@ -211,7 +211,7 @@ const questions = [
   },
   {
     'question': 'In which US state is Panama City?',
-    'answer': ['floria', 'fl'],
+    'answer': ['florida', 'fl'],
     'category': 'Science & Geography',
   },
   {
