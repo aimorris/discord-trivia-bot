@@ -146,7 +146,7 @@ const questions = [
   },
   {
     'question': 'In what US state is The Grand Canyon found?',
-    'answer': ['colorado'],
+    'answer': ['colorado', 'co'],
     'category': 'Science & Geography',
   },
   {
@@ -187,6 +187,86 @@ const questions = [
   {
     'question': 'What type of beans did Hannibal Lecter like to eat liver with?',
     'answer': ['fava'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What is the name of the metal covering on the tip of a shoelace?',
+    'answer': ['aglet'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'What chemical element is used in the process of galvanisation?',
+    'answer': ['zinc', 'zn'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Which planet has a moon called Europa?',
+    'answer': ['jupiter'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'The Elo rating system was originally used to rate players of which board game?',
+    'answer': ['chess'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'In which US state is Panama City?',
+    'answer': ['floria', 'fl'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What term is given to an 11 on the Beaufort Wind Scale',
+    'answer': ['violent storm'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'How many bonus points are given in Scrabble if all seven tiles are played at once?',
+    'answer': ['fifty', '50'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Who wrote the novel The Silence of the Lambs?',
+    'answer': ['harris', 'thomas harris'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Fescue is what type of plant?',
+    'answer': ['grass'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What is the sequel to the novel Little Women?',
+    'answer': ['good wives'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Which actress\'s real name was Frances Gumm?',
+    'answer': ['judy garland', 'garland'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What is the 30th longest river in the world?',
+    'answer': ['the thames river', 'the thames', 'thames river', 'thames'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What is the name of the large, prominent vein in the side of your neck?',
+    'answer': ['jugular vein', 'jugular'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'The agave plant is the source of which liquor?',
+    'answer': ['tequila'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Which Zodiac sign is represented by fish',
+    'answer': ['tequila'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Who played the lead in the movie The Matrix?',
+    'answer': ['keanu reeves', 'keanu', 'reeves'],
     'category': 'Arts & Entertainment',
   },
 ];
