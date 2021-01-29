@@ -309,6 +309,16 @@ const questions = [
     'answer': ['grenadine'],
     'category': 'Society & Humanities',
   },
+  {
+    'question': 'In the abbreviation for the medical procedure popularly known as an MRI, what does the "I" stand for?',
+    'answer': ['imaging'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'The River Indus in Pakistan begins at what lake?',
+    'answer': ['manasarovar', 'lake manasarovar'],
+    'category': 'Science & Geography',
+  },
 ];
 
 module.exports = questions;

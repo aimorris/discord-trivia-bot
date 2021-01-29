@@ -28,12 +28,14 @@ function notAnswered() {
 /**
  * The question embed
  * @param {string} question
+ * @param {string} category
  * @return {Discord.MessageEmbed}
  */
-function botQuestion(question) {
+function botQuestion(question, category) {
   return new Discord.MessageEmbed()
       .setColor(blue)
-      .setTitle(question);
+      .setTitle(question)
+      .addField('Category:', category);
 }
 
 /**

@@ -14,6 +14,7 @@ const botTimeout = 60000;
 
 let botQuestion;
 let botAnswers = [];
+let botCategory;
 
 let playerTriviaChannel;
 let asker = '237874362198392832';
@@ -152,9 +153,10 @@ async function botNewQuestion(answerer) {
 
   botQuestion = newQuestion[0];
   botAnswers = newQuestion[1];
+  botCategory = newQuestion[2];
 
   // Sends the trivia question to the #bot-trivia channel
-  await botTriviaChannel.send(embeds.botQuestion(botQuestion));
+  await botTriviaChannel.send(embeds.botQuestion(botQuestion, botCategory));
 }
 
 /**
@@ -163,7 +165,7 @@ async function botNewQuestion(answerer) {
  */
 function fetchBotQuestion() {
   const q = questions[Math.floor(Math.random() * questions.length)];
-  return [q.question, q.answer];
+  return [q.question, q.answer, q.category];
 }
 
 /**
