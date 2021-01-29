@@ -109,7 +109,7 @@ client.on('message', async (msg) => {
     asked = true;
   }
 
-  if (msg.channel.id == botTriviaChannel.id && botAnswers.includes(msg.content)) {
+  if (msg.channel.id == botTriviaChannel.id && botAnswers.includes(msg.content.toLowerCase())) {
     // Stops old bot trivia question
     clearInterval(botQuestionStream);
 
