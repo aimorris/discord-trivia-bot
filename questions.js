@@ -7,17 +7,17 @@ const questions = [
   {
     'question': 'On average, what denomination of U.S. paper currency remains in circulation the longest?',
     'answer': ['100 dollar bill', '100 dollars', 'one hundred', '100', 'one hundred dollars', 'one hundred dollar', 'one hundred dollar bill'],
-    'category': 'general',
+    'category': 'Society & Humanities',
   },
   {
     'question': 'A 2010 study found that nearly 70% of what imported item failed to live up to its claims of being “extra virgin”?',
     'answer': ['olive oil', 'extra virgin olive oil'],
-    'category': 'general',
+    'category': 'Science & Geography',
   },
   {
     'question': 'A bit of folk wisdom warns that when you point a finger at someone, how many fingers are pointing back at you?',
     'answer': ['three', '3'],
-    'category': 'general',
+    'category': 'Society & Humanities',
   },
   {
     'question': 'In the Simpsons, what member of the Simpson family is commonly seen sucking on a pacifier?',
@@ -130,7 +130,7 @@ const questions = [
     'category': 'Science & Geography',
   },
   {
-    'question': 'What country has the same name as a bird?',
+    'question': 'Whih country has the same name as a bird?',
     'answer': ['turkey'],
     'category': 'Science & Geography',
   },
@@ -142,6 +142,51 @@ const questions = [
   {
     'question': 'What is the capital of Tuvalu?',
     'answer': ['funafuti'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'In what US state is The Grand Canyon found?',
+    'answer': ['colorado'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What was Mozart\'s first name?',
+    'answer': ['wolfgang'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Which country did the French know as Terra Napoleon',
+    'answer': ['australia', 'commonwealth of australia'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'What is the largest Australian state by area?',
+    'answer': ['wa', 'western australia'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What is the name of the largest island in the world?',
+    'answer': ['greenland'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What is the capital of Eritrea?',
+    'answer': ['asmara'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Which Formula One team did both Nigel Mansell and Damon Hill drive for?',
+    'answer': ['williams'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What is the birthstone for May?',
+    'answer': ['emerald'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'What type of beans did Hannibal Lecter like to eat liver with?',
+    'answer': ['fava'],
     'category': 'Arts & Entertainment',
   },
 ];
