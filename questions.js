@@ -135,6 +135,11 @@ const questions = [
     'category': 'Science & Geography',
   },
   {
+    'question': 'What colour is the Art & Literature wedge in the original version of Trivial Pursuit?',
+    'answer': ['brown'],
+    'category': 'Arts & Entertainment',
+  },
+  {
     'question': 'What is the capital of Tuvalu?',
     'answer': ['funafuti'],
     'category': 'Arts & Entertainment',
