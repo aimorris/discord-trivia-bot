@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const green = '#6ab04c';
-const red = '#eb4d4b';
+const green = '#badc58';
+const red = '#ff7979';
 const blue = '#7ed6df';
 
 /**
