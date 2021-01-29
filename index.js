@@ -178,9 +178,9 @@ async function updateLeaderboard() {
     const lastLeaderboardMessage = messages.first();
 
     if (lastLeaderboardMessage) {
-      await lastLeaderboardMessage.edit(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
+      lastLeaderboardMessage.edit(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
     } else {
-      await leaderboardChannel.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
+      leaderboardChannel.send(embeds.leaderboard(weeklyUserObjs, totalUserObjs));
     }
   }).catch(console.error);
 
