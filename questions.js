@@ -10,7 +10,7 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'A 2010 study found that nearly 70% of what imported item failed to live up to its claims of being “extra virgin”?',
+    'question': 'A 2010 study found that nearly 70% of what imported item failed to live up to its claims of being "extra virgin"?',
     'answer': ['olive oil', 'extra virgin olive oil'],
     'category': 'Science & Geography',
   },
@@ -80,7 +80,7 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'On the children’s TV "Dora the Explorer", what is the name of the Dora\'s friend monkey?',
+    'question': 'On the children\'s TV "Dora the Explorer", what is the name of the Dora\'s friend monkey?',
     'answer': ['boots'],
     'category': 'Arts & Entertainment',
   },
@@ -318,6 +318,176 @@ const questions = [
     'question': 'The River Indus in Pakistan begins at what lake?',
     'answer': ['manasarovar', 'lake manasarovar'],
     'category': 'Science & Geography',
+  },
+  {
+    'question': 'On the 2010 Forbes 400 list, what billionaire identifies himself as residing in Medina, Washington?',
+    'answer': ['gates', 'bill gates'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'A common ingredient in ice cream and toothpaste, carrageenan is an extract of what?',
+    'answer': ['seaweed', 'red seaweed'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'On Twitter, a proper "Twaiku" poem consists of 140 characters or fewer and how many syllables?',
+    'answer': ['seven', '7'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'In the full name of the military alliance NATO, the "T" stands for what?',
+    'answer': ['treaty'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'In the human body, the pericardium is a membrane that surrounds what organ?',
+    'answer': ['heart', 'the hear'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'In the military, a Huey is a type of what?',
+    'answer': ['helicopter'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'Paleontologists believe that which of these prehistoric dinosaurs were likely covered in feathers?',
+    'answer': ['velociraptor'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'A group of what birds is known as murder?',
+    'answer': ['crow'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Patients who elect to have malar augmentation surgery wish to increase the size of their what?',
+    'answer': ['cheeks', 'cheek'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'In the popular drink bubble tea, "bubbles" or boba are typically made from what?',
+    'answer': ['tapioca'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'In the Republican party abbreviation GOP, the "G" stands for what?',
+    'answer': ['global'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'In the song "Frosty The Snowman", what part of Frosty\'s face is made of a button?',
+    'answer': ['nose'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'Performed to assist breathing, a tracheotomy is a surgery on what part of the body?',
+    'answer': ['trachea', 'windpipe', 'wind pipe'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Celebrated on February 6th, Waitangi Day is the national holiday of which nation?',
+    'answer': ['new zealand'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'Klondike is a popular variety of what card game?',
+    'answer': ['society'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'A mochaccino is traditionally made by adding what ingredient to a cappuccino?',
+    'answer': ['chocolate', 'cocoa', 'cacao'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'Physicist Stephen Hawking\'s bestselling 1988 book on the cosmos is titled "A Brief History of" what?',
+    'answer': ['time'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'A BLAT sandiwch has bacon, lettuce, tomato, and what?',
+    'answer': ['avocado'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'In the world of DC Comics, Barbara Gordon is better known as what comic book superhero?',
+    'answer': ['batgirl', 'bat girl'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Mistletoe plants normally have what color berries?',
+    'answer': ['white'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'In the \'70s, what sport transitioned from traditional white balls to "optic yellow", which were more visible to TV viewers?',
+    'answer': ['tennis'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'A person who is said to be "playing the back nine" is participating in what sport?',
+    'answer': ['golf'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'A pescetarian breaks from the vegetarian code by eating which food?',
+    'answer': ['fish'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'Popular in India, paneer is a type of what food?',
+    'answer': ['cheese'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'A popular brunch cocktail, the Bellini is typically made by mixing champagne with what pureed fruit?',
+    'answer': ['peach', 'peaches'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'A popular holiday dish that features a chicken stuffed inside a duck stuffed inside a turkey goes by what name?',
+    'answer': ['turducken'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'A popular tourist destination in Europe, Prague is the capital of what country?',
+    'answer': ['czech republic', 'czech'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Prior to becoming a world famous Italian tenor, Andrea Bocelli had what occupation?',
+    'answer': ['lawyer'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What element\'s name is based on the Spanish for "little silver"?',
+    'answer': ['platinum'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'In what U.S. state would you find Arches National Park?',
+    'answer': ['utah', 'ut'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': '"The Olive" is a boat belonging to what cartoon character?',
+    'answer': ['popeye'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Garry Kasparov\'s 2007 book is titled "How Life Imitates" what?',
+    'answer': ['chess', 'how life imitates chess'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'A man without any clothes is cheekily said to be going "the full" what?',
+    'answer': ['monty', 'the full monty', 'full monty'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'In "Star Wars: The Empire Strikes Back", Han Solo memorably says, "Laugh it Up Fuzzball" to what character?',
+    'answer': ['chewbacca'],
+    'category': 'Arts & Entertainment',
   },
 ];
 

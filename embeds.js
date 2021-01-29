@@ -22,7 +22,7 @@ function correct(answerer) {
 function notAnswered() {
   return new Discord.MessageEmbed()
       .setColor(red)
-      .setTitle('No one answered');
+      .setTitle('No one answered correctly');
 }
 
 /**
@@ -35,7 +35,7 @@ function botQuestion(question, category) {
   return new Discord.MessageEmbed()
       .setColor(blue)
       .setTitle(question)
-      .addField('Category:', category);
+      .setDescription(category);
 }
 
 /**
