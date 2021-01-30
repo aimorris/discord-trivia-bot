@@ -70,7 +70,7 @@ client.on('message', async (msg) => {
       if (asked && correctAnswerer.id !== asker && msg.channel == playerTriviaChannel) {
         asker = correctAnswerer.id;
         asked = false;
-        playerTriviaChannel.send(embeds.correct(correctAnswerer, 3));
+        playerTriviaChannel.send(embeds.correct(correctAnswerer, 3, true));
         addToScore(correctAnswerer.id, 3);
         askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
       } else {

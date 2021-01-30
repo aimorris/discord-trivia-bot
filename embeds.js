@@ -7,13 +7,14 @@ const blue = '#7ed6df';
  * The correct embed
  * @param {Discord.GuildMember} answerer
  * @param {number} points
+ * @param {boolean} playerTrivia
  * @return {Discord.MessageEmbed}
  */
-function correct(answerer, points) {
+function correct(answerer, points, playerTrivia) {
   return new Discord.MessageEmbed()
       .setColor(green)
       .setTitle('Correct!')
-      .setDescription(`<@${answerer.id}> ${points > 1 ? points + ' points have' : points + ' point has'} been added to your score on the <#779461499113439243>.`);
+      .setDescription(`<@${answerer.id}> ${points > 1 ? points + ' points have' : points + ' point has'} been added to your score on the <#779461499113439243>.${playerTrivia ? ' It is now your turn to ask a question.' : ''}`);
 }
 
 /**
