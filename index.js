@@ -70,8 +70,8 @@ client.on('message', async (msg) => {
       if (asked && correctAnswerer.id !== asker && msg.channel == playerTriviaChannel) {
         asker = correctAnswerer.id;
         asked = false;
-        msg.channel.send(embeds.correct(correctAnswerer));
-        addToScore(correctAnswerer.id, 1);
+        playerTriviaChannel.send(embeds.correct(correctAnswerer, 3));
+        addToScore(correctAnswerer.id, 3);
         askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
       } else {
         msg.delete();
@@ -146,7 +146,7 @@ function openAsker(failedAsker) {
  */
 async function botNewQuestion(answerer) {
   if (answerer !== 'first') {
-    await botTriviaChannel.send(answerer ? embeds.correct(answerer) : embeds.notAnswered());
+    await botTriviaChannel.send(answerer ? embeds.correct(answerer, 1) : embeds.notAnswered());
   }
 
   const newQuestion = await fetchBotQuestion();

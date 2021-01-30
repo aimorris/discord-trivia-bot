@@ -6,13 +6,14 @@ const blue = '#7ed6df';
 /**
  * The correct embed
  * @param {Discord.GuildMember} answerer
+ * @param {number} points
  * @return {Discord.MessageEmbed}
  */
-function correct(answerer) {
+function correct(answerer, points) {
   return new Discord.MessageEmbed()
       .setColor(green)
       .setTitle('Correct!')
-      .setDescription(`<@${answerer.id}> 1 point has been added to your score on the <#779461499113439243>.`);
+      .setDescription(`<@${answerer.id}> ${points > 1 ? 'points' + points : points + 'point'} has been added to your score on the <#779461499113439243>.`);
 }
 
 /**
