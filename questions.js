@@ -285,7 +285,7 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'What is the language isolate with the most native speakers?',
+    'question': 'Which language isolate has the most native speakers?',
     'answer': ['korean'],
     'category': 'Society & Humanities',
   },
