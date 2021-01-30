@@ -8,21 +8,29 @@ const {token} = require('./secrets.json');
 const client = new Discord.Client();
 client.login(token);
 
-let botTriviaChannel;
-let botQuestionStream;
 const botTimeout = 60000;
 
-let botQuestion;
-let botAnswers = [];
-let botCategory;
+const item = questions[Math.floor(Math.random() * quiz.length)];
 
-let playerTriviaChannel;
 let asker = '237874362198392832';
 let askerQuestionTimeout;
 let asked = false;
 const askTimeout = 300000;
 
+let botTriviaChannel;
+let playerTriviaChannel;
+let staffChatChannel;
+
 const leaderboardUpdatePeriod = 10000;
+
+/**
+ * Filter for awaitMessages
+ * @param {Discord.Message} response
+ * @return {boolean}
+ */
+function filter(response) {
+  return item.answers.some((answer) => answer.toLowerCase() === response.content.toLowerCase().replace(/\s/g, ''));
+};
 
 // After the bot is logged in and ready
 client.once('ready', async () => {
@@ -32,12 +40,8 @@ client.once('ready', async () => {
   staffChatChannel = await client.channels.fetch('779242027225317377');
   await mongoConnect();
 
+  newBotQuestion();
   staffChatChannel.send(embeds.botStarted(questions.length));
-
-  // Starts sending questions to #bot-trivia
-  botNewQuestion('first');
-  botQuestionStream = setInterval(botNewQuestion, botTimeout, null);
-
   askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
 
   updateLeaderboard();
@@ -109,18 +113,26 @@ client.on('message', async (msg) => {
     clearTimeout(askerQuestionTimeout);
     asked = true;
   }
-
-  if (msg.channel.id == botTriviaChannel.id && botAnswers.includes(msg.content.toLowerCase().replace(/\s/g, ''))) {
-    // Stops old bot trivia question
-    clearInterval(botQuestionStream);
-
-    addToScore(msg.member.id, 1);
-
-    // Starts new bot trivia question
-    botNewQuestion(msg.member);
-    botQuestionStream = setInterval(botNewQuestion, botTimeout, null);
-  }
 });
+
+/**
+ * New bot question
+ */
+function newBotQuestion() {
+  botTriviaChannel.send(embeds.botQuestion(item.question, item.category)).then(() => {
+    botTriviaChannel.awaitMessages(filter, {max: 1, time: botTimeout, errors: ['time']})
+        .then((collected) => {
+          const correctAnswerer = collected.first().author;
+          botTriviaChannel.send(embeds.correct(correctAnswerer));
+          addToScore(correctAnswerer.id, 1);
+          newBotQuestion();
+        })
+        .catch((_) => {
+          botTriviaChannel.send(embeds.notAnswered());
+          newBotQuestion();
+        });
+  });
+}
 
 /**
  * Checks if message content is bold
@@ -138,34 +150,6 @@ function isBold(messageContent) {
 function openAsker(failedAsker) {
   playerTriviaChannel.send(embeds.askerOpen(failedAsker));
   asker = null;
-}
-
-/**
- * Sends a new bot question
- * @param {Discord.GuildMember} answerer
- */
-async function botNewQuestion(answerer) {
-  if (answerer !== 'first') {
-    await botTriviaChannel.send(answerer ? embeds.correct(answerer, 1) : embeds.notAnswered());
-  }
-
-  const newQuestion = await fetchBotQuestion();
-
-  botQuestion = newQuestion[0];
-  botAnswers = newQuestion[1];
-  botCategory = newQuestion[2];
-
-  // Sends the trivia question to the #bot-trivia channel
-  await botTriviaChannel.send(embeds.botQuestion(botQuestion, botCategory));
-}
-
-/**
- * Fetches a question for the bot from questions.js
- * @return {Array}
- */
-function fetchBotQuestion() {
-  const q = questions[Math.floor(Math.random() * questions.length)];
-  return [q.question, q.answer, q.category];
 }
 
 /**
