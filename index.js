@@ -9,13 +9,11 @@ const client = new Discord.Client();
 client.login(token);
 
 const botTimeout = 60000;
-
-const item = questions[Math.floor(Math.random() * quiz.length)];
+const askTimeout = 300000;
 
 let asker = '237874362198392832';
 let askerQuestionTimeout;
 let asked = false;
-const askTimeout = 300000;
 
 let botTriviaChannel;
 let playerTriviaChannel;
@@ -119,11 +117,12 @@ client.on('message', async (msg) => {
  * New bot question
  */
 function newBotQuestion() {
+  const item = questions[Math.floor(Math.random() * questions.length)];
   botTriviaChannel.send(embeds.botQuestion(item.question, item.category)).then(() => {
     botTriviaChannel.awaitMessages(filter, {max: 1, time: botTimeout, errors: ['time']})
         .then((collected) => {
           const correctAnswerer = collected.first().author;
-          botTriviaChannel.send(embeds.correct(correctAnswerer));
+          botTriviaChannel.send(embeds.correct(correctAnswerer, 1, false));
           addToScore(correctAnswerer.id, 1);
           newBotQuestion();
         })
