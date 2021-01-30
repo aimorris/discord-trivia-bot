@@ -12,7 +12,6 @@ const botTimeout = 60000;
 const askTimeout = 300000;
 
 let asker = '237874362198392832';
-let askerQuestionTimeout;
 let asked = false;
 
 let botTriviaChannel;
@@ -20,15 +19,6 @@ let playerTriviaChannel;
 let staffChatChannel;
 
 const leaderboardUpdatePeriod = 10000;
-
-/**
- * Filter for awaitMessages
- * @param {Discord.Message} response
- * @return {boolean}
- */
-function filter(response) {
-  return item.answers.some((answer) => answer.toLowerCase() === response.content.toLowerCase().replace(/\s/g, ''));
-};
 
 // After the bot is logged in and ready
 client.once('ready', async () => {
@@ -39,8 +29,8 @@ client.once('ready', async () => {
   await mongoConnect();
 
   newBotQuestion();
+  waitingForAsker();
   staffChatChannel.send(embeds.botStarted(questions.length));
-  askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
 
   updateLeaderboard();
 });
@@ -74,7 +64,7 @@ client.on('message', async (msg) => {
         asked = false;
         playerTriviaChannel.send(embeds.correct(correctAnswerer, 3, true));
         addToScore(correctAnswerer.id, 3);
-        askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
+        waitingForAsker();
       } else {
         msg.delete();
       }
@@ -94,7 +84,7 @@ client.on('message', async (msg) => {
       if (asker == null && msg.channel == playerTriviaChannel) {
         asker = msg.member.id;
         playerTriviaChannel.send(embeds.newAsker(asker));
-        askerQuestionTimeout = setTimeout(openAsker, askTimeout, asker);
+        waitingForAsker();
       } else {
         msg.delete();
       }
@@ -102,35 +92,43 @@ client.on('message', async (msg) => {
 
     return;
   }
-
-  if ((isBold(msg.content) && msg.author.id !== asker) || (isBold(msg.content) && msg.author.id === asker && msg.channel !== playerTriviaChannel)) {
-    msg.delete();
-  }
-
-  if (isBold(msg.content) && msg.author.id === asker && msg.channel === playerTriviaChannel) {
-    clearTimeout(askerQuestionTimeout);
-    asked = true;
-  }
 });
 
 /**
  * New bot question
  */
-function newBotQuestion() {
+async function newBotQuestion() {
   const item = questions[Math.floor(Math.random() * questions.length)];
-  botTriviaChannel.send(embeds.botQuestion(item.question, item.category)).then(() => {
-    botTriviaChannel.awaitMessages(filter, {max: 1, time: botTimeout, errors: ['time']})
-        .then((collected) => {
-          const correctAnswerer = collected.first().author;
-          botTriviaChannel.send(embeds.correct(correctAnswerer, 1, false));
-          addToScore(correctAnswerer.id, 1);
-          newBotQuestion();
-        })
-        .catch((_) => {
-          botTriviaChannel.send(embeds.notAnswered());
-          newBotQuestion();
-        });
-  });
+  await botTriviaChannel.send(embeds.botQuestion(item.question, item.category));
+  botTriviaChannel.awaitMessages((response) => {
+    return item.answers.some((answer) => answer.toLowerCase() === response.content.toLowerCase().replace(/\s/g, ''));
+  }, {max: 1, time: botTimeout, errors: ['time']})
+      .then((collected) => {
+        const correctAnswerer = collected.first().author;
+        botTriviaChannel.send(embeds.correct(correctAnswerer, 1, false));
+        addToScore(correctAnswerer.id, 1);
+        newBotQuestion();
+      })
+      .catch((_) => {
+        botTriviaChannel.send(embeds.notAnswered());
+        newBotQuestion();
+      });
+}
+
+/**
+ * Waiting for player-trivia asker
+ */
+function waitingForAsker() {
+  playerTriviaChannel.awaitMessages((response) => {
+    return (response.author.id == asker) && isBold(response.content);
+  }, {max: 1, time: askTimeout, errors: ['time']})
+      .then((_) => {
+        asked = true;
+      })
+      .catch((_) => {
+        playerTriviaChannel.send(embeds.askerOpen(asker));
+        asker = null;
+      });
 }
 
 /**
@@ -140,15 +138,6 @@ function newBotQuestion() {
  */
 function isBold(messageContent) {
   return messageContent.startsWith('**') && messageContent.endsWith('**');
-}
-
-/**
- * Opens the question to other players
- * @param {Discord.GuildMember} failedAsker
- */
-function openAsker(failedAsker) {
-  playerTriviaChannel.send(embeds.askerOpen(failedAsker));
-  asker = null;
 }
 
 /**
