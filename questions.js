@@ -350,7 +350,7 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'Paleontologists believe that which of these prehistoric dinosaurs were likely covered in feathers?',
+    'question': 'Which prehistoric dinosaur do paleontologists believe was likely covered in feathers?',
     'answer': ['velociraptor'],
     'category': 'Science & Geography',
   },
