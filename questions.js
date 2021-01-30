@@ -1,17 +1,17 @@
 const questions = [
   {
     'question': '7-Eleven stores were temporarily converted into Kwik E-marts to promote the release of what movie?',
-    'answer': ['the simpsons', 'simpsons', 'simpsons movie', 'the simpsons movie'],
+    'answer': ['thesimpsons', 'simpsons', 'simpsonsmovie', 'thesimpsonsmovie'],
     'category': 'Arts & Entertainment',
   },
   {
     'question': 'On average, what denomination of U.S. paper currency remains in circulation the longest?',
-    'answer': ['100 dollar bill', '100 dollars', 'one hundred', '100', 'one hundred dollars', 'one hundred dollar', 'one hundred dollar bill'],
+    'answer': ['100dollarbill', '100dollars', 'onehundred', '100', 'onehundreddollars', 'onehundreddollar', 'onehundreddollarbill'],
     'category': 'Society & Humanities',
   },
   {
     'question': 'A 2010 study found that nearly 70% of what imported item failed to live up to its claims of being "extra virgin"?',
-    'answer': ['olive oil', 'extra virgin olive oil'],
+    'answer': ['oliveoil', 'extravirginoliveoil'],
     'category': 'Science & Geography',
   },
   {
@@ -21,7 +21,7 @@ const questions = [
   },
   {
     'question': 'In "The Simpsons", what member of the Simpson family is commonly seen sucking on a pacifier?',
-    'answer': ['maggie', 'maggie simpsons', 'margaret'],
+    'answer': ['maggie', 'maggiesimpson', 'margaret'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -41,12 +41,12 @@ const questions = [
   },
   {
     'question': 'In the "Harry Potter" series, what school does Harry Potter attend?',
-    'answer': ['hogwarts', 'hogwarts school of witchcraft and wizardry'],
+    'answer': ['hogwarts', 'hogwartsschoolofwitchcraftandwizardry'],
     'category': 'Arts & Entertainment',
   },
   {
     'question': 'What is the fourth book in the "Harry Potter" series?',
-    'answer': ['goblet of fire', 'harry potter and the goblet of fire', 'the goblet of fire'],
+    'answer': ['gobletoffire', 'harrypotterandthegobletoffire', 'thegobletoffire'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -56,12 +56,12 @@ const questions = [
   },
   {
     'question': 'Who was the first United States Secretary of State?',
-    'answer': ['thomas jefferson', 'jefferson'],
+    'answer': ['thomasjefferson', 'jefferson'],
     'category': 'Society & Humanities',
   },
   {
     'question': 'Which actor played Hannibal Lecter in the "Hannibal" movie trilogy?',
-    'answer': ['sir anthony hopkins', 'anthony hopkins', 'hopkins', 'sir anthony'],
+    'answer': ['siranthonyhopkins', 'anthonyhopkins', 'hopkins', 'siranthony'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -76,7 +76,7 @@ const questions = [
   },
   {
     'question': 'What is the regnal name of the first monarch to abdicate?',
-    'answer': ['king edward viii', 'edward viii', 'king edward 8th', 'king edward eighth', 'edward eighth', 'king edward 8', 'edward 8', 'edward eight'],
+    'answer': ['kingedwardviii', 'edwardviii', 'kingedward8th', 'kingedwardeighth', 'edwardeighth', 'kingedward8', 'edward8', 'edwardeight'],
     'category': 'Society & Humanities',
   },
   {
@@ -86,7 +86,7 @@ const questions = [
   },
   {
     'question': 'What kind of whale is featured in the classic tale "Moby Dick"?',
-    'answer': ['sperm', 'sperm whale'],
+    'answer': ['sperm', 'spermwhale'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -106,7 +106,7 @@ const questions = [
   },
   {
     'question': 'In the show "American Dad", character Steve Smith attends what school?',
-    'answer': ['pearl bailey', 'pearl bailey school', 'pearl bailey high', 'pearl bailey high school'],
+    'answer': ['pearlbailey', 'pearlbaileyschool', 'pearlbaileyhigh', 'pearlbaileyhighschool'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -116,12 +116,12 @@ const questions = [
   },
   {
     'question': 'What is the name of the longest river in the Western Hemisphere?',
-    'answer': ['amazon', 'the amazon', 'amazon river', 'the amazon river'],
+    'answer': ['amazon', 'theamazon', 'amazonriver', 'theamazonriver'],
     'category': 'Science & Geography',
   },
   {
     'question': 'What does an anemometer measure?',
-    'answer': ['wind', 'wind speed', 'wind velocity', 'wind direction'],
+    'answer': ['wind', 'windspeed', 'windvelocity', 'winddirection'],
     'category': 'Science & Geography',
   },
   {
@@ -156,12 +156,12 @@ const questions = [
   },
   {
     'question': 'Which country did the French know as Terra Napoleon?',
-    'answer': ['australia', 'commonwealth of australia'],
+    'answer': ['australia', 'commonwealthofaustralia'],
     'category': 'Society & Humanities',
   },
   {
     'question': 'What is the largest Australian state by area?',
-    'answer': ['wa', 'western australia'],
+    'answer': ['wa', 'westernaustralia'],
     'category': 'Science & Geography',
   },
   {
@@ -216,7 +216,7 @@ const questions = [
   },
   {
     'question': 'What term is given to an 11 on the Beaufort Wind Scale?',
-    'answer': ['violent storm'],
+    'answer': ['violentstorm'],
     'category': 'Science & Geography',
   },
   {
@@ -226,7 +226,7 @@ const questions = [
   },
   {
     'question': 'Who wrote the novel "The Silence of the Lambs"?',
-    'answer': ['harris', 'thomas harris'],
+    'answer': ['harris', 'thomasharris'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -236,22 +236,22 @@ const questions = [
   },
   {
     'question': 'What is the sequel to the novel "Little Women"?',
-    'answer': ['good wives'],
+    'answer': ['goodwives'],
     'category': 'Arts & Entertainment',
   },
   {
     'question': 'Which actress\'s real name was Frances Gumm?',
-    'answer': ['judy garland', 'garland'],
+    'answer': ['judygarland', 'garland'],
     'category': 'Arts & Entertainment',
   },
   {
     'question': 'What is the 30th longest river in the world?',
-    'answer': ['the thames river', 'the thames', 'thames river', 'thames'],
+    'answer': ['thethamesriver', 'thethames', 'thamesriver', 'thames'],
     'category': 'Science & Geography',
   },
   {
     'question': 'What is the name of the large, prominent vein in the side of your neck?',
-    'answer': ['jugular vein', 'jugular'],
+    'answer': ['jugularvein', 'jugular'],
     'category': 'Science & Geography',
   },
   {
@@ -266,17 +266,17 @@ const questions = [
   },
   {
     'question': 'Who played the lead in the movie "The Matrix"?',
-    'answer': ['keanu reeves', 'keanu', 'reeves'],
+    'answer': ['keanureeves', 'reeves'],
     'category': 'Arts & Entertainment',
   },
   {
     'question': 'What nerve agent was used in the assassination of Kim Jong Nam?',
-    'answer': ['sarin', 'sarin gas'],
+    'answer': ['sarin', 'saringas'],
     'category': 'Society & Humanities',
   },
   {
     'question': 'What animal is the mascot of Coca-Cola?',
-    'answer': ['polar bear'],
+    'answer': ['polarbear'],
     'category': 'Society & Humanities',
   },
   {
@@ -301,7 +301,7 @@ const questions = [
   },
   {
     'question': 'What was the name of the US President before Donald Trump?',
-    'answer': ['barack obama', 'obama', 'barack'],
+    'answer': ['barackobama', 'obama', 'barack'],
     'category': 'Society & Humanities',
   },
   {
@@ -326,7 +326,7 @@ const questions = [
   },
   {
     'question': 'A common ingredient in ice cream and toothpaste, carrageenan is an extract of what?',
-    'answer': ['seaweed', 'red seaweed'],
+    'answer': ['seaweed', 'redseaweed'],
     'category': 'Science & Geography',
   },
   {
@@ -341,7 +341,7 @@ const questions = [
   },
   {
     'question': 'In the human body, the pericardium is a membrane that surrounds what organ?',
-    'answer': ['heart', 'the hear'],
+    'answer': ['heart', 'theheart'],
     'category': 'Science & Geography',
   },
   {
@@ -381,12 +381,12 @@ const questions = [
   },
   {
     'question': 'Performed to assist breathing, a tracheotomy is a surgery on what part of the body?',
-    'answer': ['trachea', 'windpipe', 'wind pipe'],
+    'answer': ['trachea', 'windpipe', 'windpipe'],
     'category': 'Science & Geography',
   },
   {
     'question': 'Celebrated on February 6th, Waitangi Day is the national holiday of which nation?',
-    'answer': ['new zealand'],
+    'answer': ['newzealand'],
     'category': 'Society & Humanities',
   },
   {
@@ -411,7 +411,7 @@ const questions = [
   },
   {
     'question': 'In the world of DC Comics, Barbara Gordon is better known as what comic book superhero?',
-    'answer': ['batgirl', 'bat girl'],
+    'answer': ['batgirl', 'batgirl'],
     'category': 'Arts & Entertainment',
   },
   {
@@ -451,7 +451,7 @@ const questions = [
   },
   {
     'question': 'A popular tourist destination in Europe, Prague is the capital of what country?',
-    'answer': ['czech republic', 'czech'],
+    'answer': ['czechrepublic', 'czechia'],
     'category': 'Science & Geography',
   },
   {
@@ -476,18 +476,88 @@ const questions = [
   },
   {
     'question': 'Garry Kasparov\'s 2007 book is titled "How Life Imitates" what?',
-    'answer': ['chess', 'how life imitates chess'],
+    'answer': ['chess', 'howlifeimitateschess'],
     'category': 'Arts & Entertainment',
   },
   {
     'question': 'A man without any clothes is cheekily said to be going "the full" what?',
-    'answer': ['monty', 'the full monty', 'full monty'],
+    'answer': ['monty', 'thefullmonty', 'fullmonty'],
     'category': 'Society & Humanities',
   },
   {
     'question': 'In "Star Wars: The Empire Strikes Back", Han Solo memorably says, "Laugh it Up Fuzzball" to what character?',
     'answer': ['chewbacca'],
     'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What group of reptilian heroes are referred to as "heroes in a half shell" in their original TV show theme?',
+    'answer': ['tmnt', 'teenagemutantninjaturtles', 'tmht', 'teenagemutantheroturtles'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Strikers, midfielders, and defenders are roles in what sport?',
+    'answer': ['soccer', 'football'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'The Serengeti National Park is located in which country?',
+    'answer': ['tanzania'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'What is the name of Scooby Doo\'s nephew?',
+    'answer': ['scrappy', 'scrappydoo'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'The Great Molasses Flood occurred in what city in January 1919?',
+    'answer': ['boston'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'What fictional Skunk character was created by Warner Bros and was first introduced in 1945?',
+    'answer': ['pepelepew'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'Which controversial American comedian was arrested after performing a set on seven words you can\'t say on television?',
+    'answer': ['georgecarlin', 'carlin'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What is the smallest landlocked country?',
+    'answer': ['vaticancity', 'vatican', 'thevatican', 'holysee', 'theholysee'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Which actor has starred in movies such The Matrix, John Wick, and Constantine?',
+    'answer': ['reeves', 'keanureeves'],
+    'category': 'Arts & Entertainment',
+  },
+  {
+    'question': 'What term refers to the one in a million chance of death?',
+    'answer': ['micromort'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'The state of Rhodesia was the predecessor to which modern-day country?',
+    'answer': ['zimbabwe'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Which fish are named for having lower jaws which are distinctively much longer than their upper jaws?',
+    'answer': ['halfbeak'],
+    'category': 'Science & Geography',
+  },
+  {
+    'question': 'Which nation\'s symbol is an eagle perched on a cactus with a writhing snake in its beak?',
+    'answer': ['mexico'],
+    'category': 'Society & Humanities',
+  },
+  {
+    'question': 'Which landlocked country was formerly known as Kirghizia?',
+    'answer': ['kyrgyzstan'],
+    'category': 'Science & Geography',
   },
 ];
 
