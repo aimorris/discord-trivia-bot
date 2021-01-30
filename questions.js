@@ -559,6 +559,11 @@ const questions = [
     'answer': ['kyrgyzstan'],
     'category': 'Science & Geography',
   },
+  {
+    'question': 'How many strings does a mandolin have?',
+    'answer': ['8', 'eight'],
+    'category': 'Arts & Entertainment',
+  },
 ];
 
 module.exports = questions;
