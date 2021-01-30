@@ -13,7 +13,7 @@ function correct(answerer, points) {
   return new Discord.MessageEmbed()
       .setColor(green)
       .setTitle('Correct!')
-      .setDescription(`<@${answerer.id}> ${points > 1 ? 'points' + points : points + 'point'} has been added to your score on the <#779461499113439243>.`);
+      .setDescription(`<@${answerer.id}> ${points > 1 ? ' points have' + points : points + ' point has'} been added to your score on the <#779461499113439243>.`);
 }
 
 /**
