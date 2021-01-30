@@ -305,7 +305,7 @@ const questions = [
     'category': 'Society & Humanities',
   },
   {
-    'question': 'What is added to ginger beer to make the non-alcoholic drink Shirley Temple?',
+    'question': 'What is added to ginger beer to make the non-alcoholic drink "Shirley Temple"?',
     'answer': ['grenadine'],
     'category': 'Society & Humanities',
   },
