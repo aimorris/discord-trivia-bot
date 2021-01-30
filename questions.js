@@ -405,7 +405,7 @@ const questions = [
     category: 'Arts & Entertainment',
   },
   {
-    question: 'A BLAT sandiwch has bacon, lettuce, tomato, and what?',
+    question: 'A BLAT sandwich has bacon, lettuce, tomato, and what?',
     answers: ['avocado'],
     category: 'Society & Humanities',
   },
