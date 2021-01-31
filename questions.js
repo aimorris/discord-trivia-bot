@@ -564,6 +564,111 @@ const questions = [
     answers: ['8', 'eight'],
     category: 'Arts & Entertainment',
   },
+  {
+    question: 'The internet domain ".fm" is the country-code top-level domain for which Pacific Ocean island nation?',
+    answers: ['micronesia'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'Who was the President of the United States during the signing of the Gadsden Purchase?',
+    answers: ['franklinpierce', 'pierce'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What is the 100th digit of Pi?',
+    answers: ['9', 'nine'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What is the name for the auditory illusion of a note that seems to be rising infinitely?',
+    answers: ['shepard', 'shepardtone', 'shepardscale'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'The moons Miranda, Ariel, Umbriel, Titania and Oberon orbit which planet?',
+    answers: ['uranus'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What colour is the circle on the Japanese flag?',
+    answers: ['red'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'Brian May was the guitarist for which band?',
+    answers: ['queen'],
+    category: 'Arts & Entertainment',
+  },
+  {
+    question: 'In which year did the first Monster Hunter game get released?',
+    answers: ['2004'],
+    category: 'Arts & Entertainment',
+  },
+  {
+    question: 'Brazil was a former colony under which country?',
+    answers: ['portugal'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'Who painted The Starry Night?',
+    answers: ['vincentvangogh', 'gogh', 'vangogh'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'What was the name of the chemical that was dropped on Vietnam during the Vietnam war?',
+    answers: ['agentorange'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'How many nipples does an echidna have?',
+    answers: ['0', 'zero', 'none', 'nil'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What is the thylacine more commonly known as?',
+    answers: ['tasmaniantiger', 'thetasmaniantiger'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What is an egg-laying mammal called?',
+    answers: ['montreme', 'amonotreme'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What is an egg-laying mammal called?',
+    answers: ['montreme', 'amonotreme'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What famous race was established in 1903?',
+    answers: ['tourdefrance', 'thetourdefrance'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'Which country was the first to give women the right to vote?',
+    answers: ['newzealand'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'What was the largest pure gold nugget (weighing 70.92kg) ever discovered called?',
+    answers: ['thewelcomestranger', 'welcomestranger'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'In what city was the Olympic torch first lit?',
+    answers: ['olympia'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'How many mascots did the Sydney Olympics have?',
+    answers: ['3', 'three'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'By what name is Maurice Micklewhite better known as?',
+    answers: ['michaelcaine', 'caine', 'sirmichaelcaine'],
+    category: 'Society & Humanities',
+  },
 ];
 
 module.exports = questions;
