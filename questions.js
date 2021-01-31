@@ -570,7 +570,7 @@ const questions = [
   },
   {
     question: 'The internet domain ".fm" is the country-code top-level domain for which Pacific Ocean island nation?',
-    answers: ['micronesia'],
+    answers: ['micronesia', 'federatedmicronesia', 'federatedstatesofmicronesia'],
     category: scienceandgeography,
   },
   {
@@ -837,6 +837,181 @@ const questions = [
     question: 'Which planet is covered in thick clouds of carbon dioxide and sulphuric acid?',
     answers: ['venus'],
     category: scienceandgeography,
+  },
+  {
+    question: 'Which planet is known as the red planet?',
+    answers: ['mars'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'In which organ is bile produced?',
+    answers: ['liver'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'Which breed of dog has an inability to bark?',
+    answers: ['basenji'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What is the name of the process used by green plants for using solar power to produce ATP?',
+    answers: ['photosynthesis'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What is the study of insects called?',
+    answers: ['entomology'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What name is given to a male bee?',
+    answers: ['drone'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What name is given to animals that eat both plants and meat?',
+    answers: ['omnivore', 'omnivores'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What name is given to animals that only eat meat?',
+    answers: ['carnivore', 'carnivores'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What name is given to animals that only eat plants?',
+    answers: ['herbivore', 'herbivores'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'Which bird became extinct in 1861?',
+    answers: ['dodo', 'thedodo'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'Which element has the chemical symbol name "Au"?',
+    answers: ['gold'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'Which element has the chemical symbol name "Na"?',
+    answers: ['sodium'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'Which element has the chemical symbol name "Sb"?',
+    answers: ['antimony'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'Which element has the chemical symbol name "Sn"?',
+    answers: ['tin'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What is another name for iron oxide?',
+    answers: ['rust'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What name is given to a chemical reaction which releases heat?',
+    answers: ['exothermic'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'Who invented dynamite?',
+    answers: ['alfrednobel', 'nobel'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'In computers, how many bits are in a nibble?',
+    answers: ['4', 'four'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'How many feet are in a nautical mile?',
+    answers: ['6080', 'sixthousandandeighty'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'How many herrings are in a warp?',
+    answers: ['4', 'four'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'How many muscles are in an average human?',
+    answers: ['639', 'sixhundredandthirtynine'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'How many seconds are in a day?',
+    answers: ['86400', 'eightysixthousandfourhundred'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'In a period of 400 years how many times does the 1st of January fall on a Sunday?',
+    answers: ['58', 'fiftyeight'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'In a chemical reaction, the substance which is oxidized itself is called what?',
+    answers: ['reductant', 'reducing agent', 'reducer'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'The Triassic, Jurrasic, and Cretaceous periods make up which era?',
+    answers: ['mesozoic', 'mesozoic era'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'The term sesquiquadricentennial represents how many years ?',
+    answers: ['450', 'fourhundredandfifty'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What is the height of a horse measured in?',
+    answers: ['hands'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What famous stone structure is located near Salisbury?',
+    answers: ['stonehenge'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What is "LCD" an abbreviation of?',
+    answers: ['liquidcrystaldisply'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'What is "e.g." an abbreviation of?',
+    answers: ['exempligratia'],
+    category: societyandhumanities,
+  },
+  {
+    question: 'Which record label reached fame in the 50\'s with acts such as "Marvin Gaye" and "The Temptations"?',
+    answers: ['motown'],
+    category: artsandentertainment,
+  },
+  {
+    question: 'What musician\'s fans are commonly refered to as Dickheads?',
+    answers: ['dickdale', 'dale'],
+    category: artsandentertainment,
+  },
+  {
+    question: 'The popular sea shanty "The Wellerman" has its origins in which country?',
+    answers: ['newzealand'],
+    category: societyandhumanities,
+  },
+  {
+    question: 'What is the lead in pencils made from?',
+    answers: ['graphite', 'carbon'],
+    category: scienceandgeography,
+  },
+  {
+    question: 'The music festival "Tomorrowland" happens in which country?',
+    answers: ['belgium'],
+    category: artsandentertainment,
   },
 ];
 

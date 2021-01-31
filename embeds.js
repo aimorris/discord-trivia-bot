@@ -118,7 +118,7 @@ function leaderboard(weeklyUserObjs, totalUserObjs) {
 
     totalRanks += `**${i + 1}.**\n`;
     totalUsers += `<@${userId}>\n`;
-    totalScores += `\`${userScore}\`\n`;
+    totalScores += `${userScore}\n`;
   }
 
   return new Discord.MessageEmbed()
