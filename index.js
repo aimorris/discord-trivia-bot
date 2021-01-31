@@ -81,7 +81,7 @@ client.on('message', async (msg) => {
     }
 
     if (command == 'me') {
-      if (asker == null && msg.channel == playerTriviaChannel) {
+      if ((asker == null && msg.channel == playerTriviaChannel) || (msg.member.roles.cache.has('779241416688926740'))) {
         asker = msg.member.id;
         playerTriviaChannel.send(embeds.newAsker(asker));
         waitingForAsker();
@@ -91,6 +91,14 @@ client.on('message', async (msg) => {
     }
 
     return;
+  }
+});
+
+client.on('guildMemberRemove', (member) => {
+  if (member.id == asker) {
+    asker = '237874362198392832';
+    playerTriviaChannel.send(embeds.newAsker(asker));
+    waitingForAsker();
   }
 });
 
