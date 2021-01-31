@@ -371,7 +371,7 @@ const questions = [
   },
   {
     question: 'In the Republican party abbreviation GOP, the "G" stands for what?',
-    answers: ['global'],
+    answers: ['grand'],
     category: 'Society & Humanities',
   },
   {
@@ -546,7 +546,7 @@ const questions = [
   },
   {
     question: 'Which fish are named for having lower jaws which are distinctively much longer than their upper jaws?',
-    answers: ['halfbeak'],
+    answers: ['halfbeak', 'halfbeaks'],
     category: 'Science & Geography',
   },
   {
@@ -667,6 +667,106 @@ const questions = [
   {
     question: 'By what name is Maurice Micklewhite better known as?',
     answers: ['michaelcaine', 'caine', 'sirmichaelcaine'],
+    category: 'Arts & Entertainment',
+  },
+  {
+    question: 'Which US President\'s domestic policy was called the Square Deal?',
+    answers: ['teddyroosevelt', 'roosevelt', 'theodoreroosevelt'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'Which play is also known as "The Scottish Play"?',
+    answers: ['macbeth'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'By what name is Robert Zimmerman better known as?',
+    answers: ['bobdylan', 'dylan'],
+    category: 'Arts & Entertainment',
+  },
+  {
+    question: 'By what name is Richard Starkey better known as?',
+    answers: ['ringostarr', 'starr'],
+    category: 'Arts & Entertainment',
+  },
+  {
+    question: 'By what name is Reginald Dwight better known as?',
+    answers: ['eltonjohn', 'john'],
+    category: 'Arts & Entertainment',
+  },
+  {
+    question: 'What is the main ingredient in the soup Borscht?',
+    answers: ['beetroot', 'beetroots', 'beet', 'beets'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'What bird has the biggest wingspan?',
+    answers: ['albatross'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What do you call a group of rhinoceros?',
+    answers: ['acrash', 'crash'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'Which country is Mt Etna in?',
+    answers: ['italy'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'To what genus of tree does the wattle belong?',
+    answers: ['acacia'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What word describes a part of your hand and a type of tree?',
+    answers: ['palm'],
+    category: 'Science & Geography',
+  },
+  {
+    question: 'What is the name given to the art of miniaturising trees and maintaining their small size?',
+    answers: ['bonsai'],
+    category: 'Arts & Entertainment',
+  },
+  {
+    question: 'What creature is depicted on the Welsh Flag?',
+    answers: ['dragon', 'adragon', 'reddragon', 'areddragon'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'What is the flower emblem of Wales?',
+    answers: ['daffodil'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'Who is the patron saint of Wales?',
+    answers: ['stdavid', 'david'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'What nut is used to make marzipan?',
+    answers: ['almond'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'What famous playwright has his birthday on 23rd April?',
+    answers: ['shakespeare', 'williamshakespeare', 'bardofavon'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'Which country celebrates its National Day on 17th May?',
+    answers: ['norway'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'What was signed on 15th June 1215?',
+    answers: ['themagnacarta', 'magnacarta'],
+    category: 'Society & Humanities',
+  },
+  {
+    question: 'Which Vice President was the only one to serve two full terms as President?',
+    answers: ['jefferson', 'thomasjefferson'],
     category: 'Society & Humanities',
   },
 ];
