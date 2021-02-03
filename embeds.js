@@ -161,5 +161,5 @@ module.exports = {
   botStarted,
   botStopped,
   newAsker,
-  badqEmbed
+  badqEmbed,
 };

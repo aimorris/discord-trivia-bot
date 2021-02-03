@@ -9534,11 +9534,6 @@ const questions = [
     category: scienceandgeography,
   },
   {
-    question: 'How many gallons of fuel does a jumbo jet use during take off?',
-    answers: ['fourthousand'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'What does a pilot drop to slow an airplane?',
     answers: ['flaps'],
     category: 'Needs to be categorised',
@@ -17914,16 +17909,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'the film \"Crouching Tiger, Hidden Dragon\" takes place in which dynasty (- the \' )',
-    answers: ['ching'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'the film \"Crouching Tiger, Hidden Dragon\" takes place in which dynasty (- the \' )',
-    answers: ['ching'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'How many stars are there on Brazil\'s flag?',
     answers: ['twentythree'],
     category: 'Needs to be categorised',
@@ -19340,7 +19325,7 @@ const questions = [
   },
   {
     question: 'Who wrote \'The Canterbury Tales\'?',
-    answers: ['geoffreychaucer'],
+    answers: ['geoffreychaucer', 'chaucer'],
     category: 'Needs to be categorised',
   },
   {
