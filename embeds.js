@@ -92,9 +92,10 @@ function botStopped() {
  * The bad question embed
  * @param {string} question
  * @param {string} user
+ * @param {string} reason
  * @return {Discord.MessageEmbed}
  */
-function badqEmbed(question, user) {
+function badqEmbed(question, user, reason) {
   return new Discord.MessageEmbed()
       .setColor(blue)
       .setTitle(question)
