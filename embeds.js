@@ -89,6 +89,20 @@ function botStopped() {
 }
 
 /**
+ * The bad question embed
+ * @param {string} question
+ * @param {string} user
+ * @return {Discord.MessageEmbed}
+ */
+function badqEmbed(question, user) {
+  return new Discord.MessageEmbed()
+      .setColor(blue)
+      .setTitle(question)
+      .addField('User: ', `<@${user}>`)
+      .addField('Reason: ', reason);
+}
+
+/**
  * The leaderboard embed
  * @param {Array.<Discord.GuildMember>} weeklyUserObjs
  * @param {Array.<Discord.GuildMember>} totalUserObjs
@@ -109,7 +123,7 @@ function leaderboard(weeklyUserObjs, totalUserObjs) {
 
     weeklyRanks += `**${i + 1}.**\n`;
     weeklyUsers += `<@${userId}>\n`;
-    weeklyScores += `\`${userScore}\`\n`;
+    weeklyScores += `${userScore}\n`;
   }
 
   for (let i = 0; i < Object.keys(totalUserObjs).length; i++) {
@@ -146,4 +160,5 @@ module.exports = {
   botStarted,
   botStopped,
   newAsker,
+  badqEmbed
 };

@@ -17,6 +17,9 @@ let asked = false;
 let botTriviaChannel;
 let playerTriviaChannel;
 let staffChatChannel;
+let badqsChannel;
+
+let botQuestion;
 
 const leaderboardUpdatePeriod = 10000;
 
@@ -26,6 +29,7 @@ client.once('ready', async () => {
   botTriviaChannel = await client.channels.fetch('804222341650710538');
   playerTriviaChannel = await client.channels.fetch('779460690586501120');
   staffChatChannel = await client.channels.fetch('779242027225317377');
+  badqsChannel = await client.channels.fetch('806428415795789845');
   await mongoConnect();
 
   newBotQuestion();
@@ -90,6 +94,11 @@ client.on('message', async (msg) => {
       }
     }
 
+    if (command == 'badq') {
+      badqsChannel.send(embeds.badqEmbed(botQuestion, msg.user.id, args[0]));
+      msg.channel.send('Question has been reported to the moderators. Thanks.');
+    }
+
     return;
   }
 });
@@ -107,6 +116,7 @@ client.on('guildMemberRemove', (member) => {
  */
 async function newBotQuestion() {
   const item = questions[Math.floor(Math.random() * questions.length)];
+  botQuestion = item.question;
   await botTriviaChannel.send(embeds.botQuestion(item.question, item.category));
   botTriviaChannel.awaitMessages((response) => {
     return item.answers.some((answer) => answer.toLowerCase() === response.content.toLowerCase().replace(/\s/g, ''));
