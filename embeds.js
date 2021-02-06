@@ -96,11 +96,18 @@ function botStopped() {
  * @return {Discord.MessageEmbed}
  */
 function badqEmbed(question, user, reason) {
-  return new Discord.MessageEmbed()
-      .setColor(blue)
-      .setTitle(question)
-      .addField('User: ', `<@${user}>`)
-      .addField('Reason: ', reason);
+  if (reason !== '') {
+    return new Discord.MessageEmbed()
+        .setColor(blue)
+        .setTitle(question)
+        .addField('User: ', `<@${user}>`)
+        .addField('Reason: ', reason);
+  } else {
+    return new Discord.MessageEmbed()
+        .setColor(blue)
+        .setTitle(question)
+        .addField('User: ', `<@${user}>`);
+  }
 }
 
 /**

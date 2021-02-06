@@ -959,7 +959,7 @@ const questions = [
     category: scienceandgeography,
   },
   {
-    question: 'The Triassic, Jurrasic, and Cretaceous periods make up which era?',
+    question: 'The Triassic, Jurassic, and Cretaceous periods make up which era?',
     answers: ['mesozoic', 'mesozoic era'],
     category: scienceandgeography,
   },
@@ -1154,11 +1154,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'How many countries have a population over 130 million?',
-    answers: ['seven(pakistan,russia,brazil,indonesia,unitedstates,indiaandchina)'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'How many countries have an area less then 10 square miles?',
     answers: ['four(vaticancity,monaco,nauruandtuvalu)'],
     category: 'Needs to be categorised',
@@ -1189,9 +1184,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'In which continent would you find the Mackenzie river?',
+    question: 'In which continent would you find the Mackenzie River?',
     answers: ['northamerica'],
-    category: 'Needs to be categorised',
+    category: scienceandgeography,
   },
   {
     question: 'In which continent would you find the Mekong river?',
@@ -3080,8 +3075,8 @@ const questions = [
   },
   {
     question: 'What is the world\'s highest mountain?',
-    answers: ['mounteverest'],
-    category: 'Needs to be categorised',
+    answers: ['mounteverest', 'everest', 'mteverest'],
+    category: scienceandgeography,
   },
   {
     question: 'What is the world\'s second highest mountain?',
@@ -3091,7 +3086,7 @@ const questions = [
   {
     question: 'What tunnel connects France and Italy?',
     answers: ['montblanctunnel', 'montblanc'],
-    category: 'Needs to be categorised',
+    category: scienceandgeography,
   },
   {
     question: 'Where are the great Walls of Babylon located in the modern day world?',
@@ -3259,9 +3254,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'How is the stockmarket collapse of the 24th October 1929 better known?',
+    question: 'How is the stock market collapse of the 24th October 1929 better known?',
     answers: ['blackthursday'],
-    category: 'Needs to be categorised',
+    category: societyandhumanities,
   },
   {
     question: 'How many countries joined the United Nations at it\'s start?',
@@ -3839,29 +3834,29 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What are the units of measurement for Energy?',
-    answers: ['joule'],
-    category: 'Needs to be categorised',
+    question: 'What is the SI unit for energy?',
+    answers: ['joule', 'j'],
+    category: scienceandgeography,
   },
   {
-    question: 'What are the units of measurement for Force?',
-    answers: ['newton'],
-    category: 'Needs to be categorised',
+    question: 'What is the SI unit for force?',
+    answers: ['newton', 'n'],
+    category: scienceandgeography,
   },
   {
-    question: 'What are the units of measurement for Frequency?',
-    answers: ['hertz'],
-    category: 'Needs to be categorised',
+    question: 'What is the SI unit for frequency?',
+    answers: ['hertz', 'hz'],
+    category: scienceandgeography,
   },
   {
-    question: 'What are the units of measurement for Power?',
-    answers: ['watt'],
-    category: 'Needs to be categorised',
+    question: 'What is the SI unit for power?',
+    answers: ['watt', 'w'],
+    category: scienceandgeography,
   },
   {
-    question: 'What are the units of measurement for Pressure?',
-    answers: ['pascal'],
-    category: 'Needs to be categorised',
+    question: 'What is the SI unit for pressure?',
+    answers: ['pascal', 'pa'],
+    category: scienceandgeography,
   },
   {
     question: 'What device is used to measure weather pressure?',
@@ -3891,11 +3886,6 @@ const questions = [
   {
     question: 'What is the luminous intensity of light measured in?',
     answers: ['candela'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'What is the name for 0.1 Newtons?',
-    answers: ['dyne'],
     category: 'Needs to be categorised',
   },
   {
@@ -4469,9 +4459,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Name the fastest mouse in all of Mexico.',
-    answers: ['speedygonzalez'],
-    category: 'Needs to be categorised',
+    question: 'Who is "The Fastest Mouse in All of Mexico"?',
+    answers: ['speedygonzalez', 'gonzalez'],
+    category: artsandentertainment,
   },
   {
     question: 'Name the ranger who was always after Yogi Bear.',
@@ -4624,9 +4614,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Where are Rocket J. Squirel and Bullwinkle Moose from?',
+    question: 'Which city are Rocket J. Squirel and Bullwinkle Moose from?',
     answers: ['frostbitefalls'],
-    category: 'Needs to be categorised',
+    category: artsandentertainment,
   },
   {
     question: 'Where did Clark Kent attend college?',
@@ -5451,11 +5441,6 @@ const questions = [
   {
     question: 'In what mountain range is Kicking Horse Pass?',
     answers: ['rocky'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'In what state is Concord?',
-    answers: ['newhampshire'],
     category: 'Needs to be categorised',
   },
   {
@@ -6839,9 +6824,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'He ordered the persecution of Christians in which Peter and Paul died.',
-    answers: ['nero'],
-    category: 'Needs to be categorised',
+    question: 'Which emperor ordered the persecution of Christians in which Peter and Paul died?',
+    answers: ['nero', 'emperornero'],
+    category: societyandhumanities,
   },
   {
     question: 'He received the Nobel Peace Prize in 1964 for his civil rights leadership.',
@@ -7269,9 +7254,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who succeeded Churchill when he resigned in 1955?',
-    answers: ['siranthonyeden'],
-    category: 'Needs to be categorised',
+    question: 'Who succeeded Winston Churchill when he resigned in 1955?',
+    answers: ['siranthonyeden', 'anthonyeden', 'eden'],
+    category: societyandhumanities,
   },
   {
     question: 'Who was "The Mad Monk"?',
@@ -8514,11 +8499,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This African animal kills the most people.',
-    answers: ['crocodile'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'This animal is armed with bony plates and rolls up into a ball if frightened.',
     answers: ['armadillo'],
     category: 'Needs to be categorised',
@@ -8679,11 +8659,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What is the world\'s longest snake?',
-    answers: ['python'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'What large herbivore sleeps only one hour a night?',
     answers: ['antelope'],
     category: 'Needs to be categorised',
@@ -8794,9 +8769,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'He was elected President of France, in 1981.',
-    answers: ['franciosmitterrand'],
-    category: 'Needs to be categorised',
+    question: 'Who was elected president of France in 1981?',
+    answers: ['franciosmitterrand', 'mitterrand'],
+    category: societyandhumanities,
   },
   {
     question: 'Name Ronald Reagan\'s first wife.',
@@ -8841,11 +8816,6 @@ const questions = [
   {
     question: 'What company makes Microsoft Windows 2000?',
     answers: ['microsoft'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Whats radar spelled backwards?',
-    answers: ['radar'],
     category: 'Needs to be categorised',
   },
   {
@@ -9981,7 +9951,7 @@ const questions = [
   {
     question: 'Which snake kills the most humans?',
     answers: ['kingcobra'],
-    category: 'Needs to be categorised',
+    category: scienceandgeography,
   },
   {
     question: 'With which island is the puffin associated?',
@@ -10011,11 +9981,6 @@ const questions = [
   {
     question: 'What date is the \'Ides\' of March?',
     answers: ['fifteenth'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Which famous million dollar building cost more than a million dollars?',
-    answers: ['sydneyoperahouse'],
     category: 'Needs to be categorised',
   },
   {
@@ -10149,9 +10114,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'How many \'Air Force One\'(s) are there?',
+    question: 'How many Air Force One\'s are there?',
     answers: ['two'],
-    category: 'Needs to be categorised',
+    category: societyandhumanities,
   },
   {
     question: 'Who wore a cabbage leaf under his cap?',
@@ -10909,11 +10874,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What do the Italians call Munich?',
-    answers: ['monacoofbavaria'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'What famous building is located on the banks of the river Jumna?',
     answers: ['tajmahal'],
     category: 'Needs to be categorised',
@@ -10950,8 +10910,8 @@ const questions = [
   },
   {
     question: 'What is the sacred river of Hinduism?',
-    answers: ['ganges'],
-    category: 'Needs to be categorised',
+    answers: ['ganges', 'ganga', 'gangesriver', 'gangariver'],
+    category: societyandhumanities,
   },
   {
     question: 'What is the tribal african word for dowry?',
@@ -11174,7 +11134,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which country has a plain green flag?',
+    question: 'Which country used to have a plain green flag?',
     answers: ['libya'],
     category: 'Needs to be categorised',
   },
@@ -11301,11 +11261,6 @@ const questions = [
   {
     question: 'What is the metal part of a lamp surrounding the bulb and supporting the shade called?',
     answers: ['harp'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Where did venetian blinds originate?',
-    answers: ['japan'],
     category: 'Needs to be categorised',
   },
   {
@@ -11656,11 +11611,6 @@ const questions = [
   {
     question: 'What Scandinavian capital begins and ends with the same letter?',
     answers: ['oslo'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'What city has the world\'s largest black population?',
-    answers: ['newyorkcity'],
     category: 'Needs to be categorised',
   },
   {
@@ -12254,9 +12204,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Where is area 51 generally said to be?',
-    answers: ['groomlake'],
-    category: 'Needs to be categorised',
+    question: 'Which US state is Area 51 located in?',
+    answers: ['nevada', 'nv'],
+    category: scienceandgeography,
   },
   {
     question: 'Where is the Blue Grotto - la Grotta Azzurra ?',
@@ -12829,9 +12779,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'When was Julius Caesar murdered?',
+    question: 'What is the name of the day when Julius Caesar was murdered?',
     answers: ['idesofmarch'],
-    category: 'Needs to be categorised',
+    category: societyandhumanities,
   },
   {
     question: 'When was the Greek alphabet first used?',
@@ -13174,9 +13124,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who is identified with the word \'eureka\'?',
+    question: 'Which mathematician is famously identified with the word \'eureka\'?',
     answers: ['archimedes'],
-    category: 'Needs to be categorised',
+    category: societyandhumanities,
   },
   {
     question: 'Who is known as the high priest of revenge?',
@@ -13261,11 +13211,6 @@ const questions = [
   {
     question: 'Who shot Abraham Lincoln?',
     answers: ['johnwilkesbooth'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Who signed the \'thanksgiving proclamation\'?',
-    answers: ['abrahamlincoln'],
     category: 'Needs to be categorised',
   },
   {
@@ -14356,7 +14301,7 @@ const questions = [
   {
     question: 'In which film was Goldie Hawn the body double for Julia Roberts?',
     answers: ['prettywoman'],
-    category: 'Needs to be categorised',
+    category: artsandentertainment,
   },
   {
     question: 'Juliette Binoche won an academy award for best supporting role in which film?',
@@ -14425,7 +14370,7 @@ const questions = [
   },
   {
     question: 'What was Ben Stiller\'s character called in \'Mystery Men\'?',
-    answers: ['mr.furious'],
+    answers: ['mr.furious', 'mrfurious', 'misterfurious'],
     category: 'Needs to be categorised',
   },
   {
@@ -16159,9 +16104,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What is Tina Turner\'s real name?',
-    answers: ['annemaebullock'],
-    category: 'Needs to be categorised',
+    question: 'What is Tina Turner\'s birth name?',
+    answers: ['annamaebullock', 'annamae', 'bullock', 'maebullock'],
+    category: artsandentertainment,
   },
   {
     question: 'What is tattooed on Glen Campbell\'s arm?',
@@ -16232,11 +16177,6 @@ const questions = [
     question: 'As who is Cassius Clay now known?',
     answers: ['mohammedali', 'muhammadali', 'ali'],
     category: societyandhumanities,
-  },
-  {
-    question: 'How many dimples does a golf ball have?',
-    answers: ['threehundredandthirtysix'],
-    category: 'Needs to be categorised',
   },
   {
     question: 'How many sides does a baseball homeplate have?',
@@ -16325,13 +16265,13 @@ const questions = [
   },
   {
     question: 'What is the score of a forfeited baseball game?',
-    answers: ['9-0'],
-    category: 'Needs to be categorised',
+    answers: ['9-0', '0-9'],
+    category: artsandentertainment,
   },
   {
     question: 'What is the score of a forfeited softball game?',
-    answers: ['7-0'],
-    category: 'Needs to be categorised',
+    answers: ['7-0', '0-7'],
+    category: artsandentertainment,
   },
   {
     question: 'What nationality is Gabriela Sabatini?',
@@ -17046,7 +16986,7 @@ const questions = [
   {
     question: 'These essential body cells do not contain nuclei?',
     answers: ['redbloodcells'],
-    category: 'Needs to be categorised',
+    category: scienceandgeography,
   },
   {
     question: 'These glands are located on top of the kidneys.',
@@ -17719,36 +17659,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Australian Ratite (3)',
-    answers: ['emu'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Fold Mother (3)',
-    answers: ['ewe'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Joie de _______ (5)',
-    answers: ['vivre'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Savoir ______ (5)',
-    answers: ['vivre'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Sheltered from the wind (4)?',
-    answers: ['alee'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Wage per hour (4)',
-    answers: ['rate'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'A chinese imperial dragon has how many toes?',
     answers: ['five'],
     category: 'Needs to be categorised',
@@ -17880,8 +17790,8 @@ const questions = [
   },
   {
     question: 'What was the first James Bond Film?',
-    answers: ['dr.no'],
-    category: 'Needs to be categorised',
+    answers: ['dr.no', 'drno'],
+    category: artsandentertainment,
   },
   {
     question: 'Who play Captian Jean-Luc Picard in Star Trek the Next Generation?',
@@ -18146,11 +18056,6 @@ const questions = [
   {
     question: 'Name the highest mountain in Africa.',
     answers: ['mt.kilimanjaro'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Name the three baltic countries?',
-    answers: ['estonia,latvia,lithuania'],
     category: 'Needs to be categorised',
   },
   {
@@ -18449,7 +18354,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What is the worlds longest concrete dam?',
+    question: 'What is the world\'s longest concrete dam?',
     answers: ['grandcouleedam'],
     category: 'Needs to be categorised',
   },
@@ -18570,8 +18475,8 @@ const questions = [
   },
   {
     question: 'How many faces does a dodecahedron have?',
-    answers: ['twelve'],
-    category: 'Needs to be categorised',
+    answers: ['twelve', '12'],
+    category: scienceandgeography,
   },
   {
     question: 'The longest side in a right-angled triangle is called the .......',
@@ -19669,9 +19574,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who was the sexy star of Barberella?',
-    answers: ['janefonda'],
-    category: 'Needs to be categorised',
+    question: 'Who was the star of Barberella?',
+    answers: ['janefonda', 'fonda'],
+    category: artsandentertainment,
   },
   {
     question: 'Who were the 2 lead characters in the movie Life?',
@@ -20864,9 +20769,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'what period Came after the triassic?',
-    answers: ['jurassic'],
-    category: 'Needs to be categorised',
+    question: 'Which period came after the Triassic Period?',
+    answers: ['jurassic', 'jurassicperiod'],
+    category: scienceandgeography,
   },
   {
     question: 'Whose ghost appears at the dinner table in \'Macbeth\'?',
@@ -21076,7 +20981,7 @@ const questions = [
   {
     question: 'Which Grand Slam tennis event is played on a clay surface?',
     answers: ['frenchopen'],
-    category: 'Needs to be categorised',
+    category: artsandentertainment,
   },
   {
     question: 'Frown, it is not well regarded.',
@@ -21509,12 +21414,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'How many country\'s have a life expectancy of over 80 years?',
+    question: 'How many countries have a life expectancy of over 80 years?',
     answers: ['four(andorra,sanmarino,australia,japan)'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'How many country\'s have a life expectancy of over 80 years?',
+    question: 'How many countries have a life expectancy of over 80 years?',
     answers: ['four(andorra,sanmarino,australia,japan)'],
     category: 'Needs to be categorised',
   },
@@ -21561,11 +21466,6 @@ const questions = [
   {
     question: 'If bats are nocturnal and horses diurnal, then coyotes and others animals that roam at dawn and the twilight hours are called?',
     answers: ['crepuscular'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'In Australia what is it considered rude to do?',
-    answers: ['wink'],
     category: 'Needs to be categorised',
   },
   {
@@ -21716,11 +21616,6 @@ const questions = [
   {
     question: 'Music: This Vienese piano manufacturer includes 3 extra bass keys. It is the favorite piano of such performers as Tori Amos.',
     answers: ['bosendorfer'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Name all of Bob the Builders friends?',
-    answers: ['wendy,muck,roley,lofteyanddizzy'],
     category: 'Needs to be categorised',
   },
   {
@@ -22510,8 +22405,8 @@ const questions = [
   },
   {
     question: 'What is the currency of Slovenia?',
-    answers: ['tolar'],
-    category: 'Needs to be categorised',
+    answers: ['dollar'],
+    category: societyandhumanities,
   },
   {
     question: 'What is the currency of Vietnam?',
@@ -22999,9 +22894,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who invented Lava Lamps?',
-    answers: ['cravenwalker'],
-    category: 'Needs to be categorised',
+    question: 'Who invented lava lamps?',
+    answers: ['cravenwalker', 'edwardcravenwalker', 'walker', 'edwardcraven'],
+    category: scienceandgeography,
   },
   {
     question: 'Who invented the compact disc or CD?',
@@ -23069,9 +22964,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said A computer will never need more than 640k of memory in 1982?',
-    answers: ['billgates'],
-    category: 'Needs to be categorised',
+    question: 'Who allegedly said that a computer will never need more than 640k of memory in 1981?',
+    answers: ['billgates', 'gates'],
+    category: scienceandgeography,
   },
   {
     question: 'Who sang the Song \"American Pie\"?',
@@ -23086,7 +22981,7 @@ const questions = [
   {
     question: 'Who sang the Song \"Gangsta\'s Paradise\"?',
     answers: ['coolio'],
-    category: 'Needs to be categorised',
+    category: artsandentertainment,
   },
   {
     question: 'Who sang the Song \'Electric Youth\'?',

@@ -96,7 +96,7 @@ client.on('message', async (msg) => {
 
     if (command == 'badq') {
       badqsChannel.send(embeds.badqEmbed(botQuestion, msg.author.id, args.join(' ')));
-      msg.channel.send('Question has been reported to the moderators. Thanks.');
+      msg.channel.send('Question has been reported to the moderators.');
     }
 
     return;
