@@ -1139,11 +1139,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Whoose lasting testament was "Cubum autem in duos cubos, aut quadratoquadratum in duos quadratoquadratos, et generaliter nullam in infinitum ultra quadratum potestatem in duos ejusdem nominis fas est dividere: cujus rei demonstrationem mirabilem sane detexi. Hanc marginis exiguitas non caperet."?',
-    answers: ['fermat'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'Burma was the former name of which country?',
     answers: ['myanmar'],
     category: 'Needs to be categorised',
