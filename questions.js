@@ -635,12 +635,7 @@ const questions = [
   },
   {
     question: 'What is an egg-laying mammal called?',
-    answers: ['montreme', 'amonotreme'],
-    category: scienceandgeography,
-  },
-  {
-    question: 'What is an egg-laying mammal called?',
-    answers: ['montreme', 'amonotreme'],
+    answers: ['monotreme', 'amonotreme'],
     category: scienceandgeography,
   },
   {
@@ -3044,7 +3039,7 @@ const questions = [
     category: scienceandgeography,
   },
   {
-    question: 'What is the capital of Yugoslavia?',
+    question: 'What was the capital of Yugoslavia?',
     answers: ['belgrade'],
     category: scienceandgeography,
   },
@@ -3764,9 +3759,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who was Ancient Egyptian goddess of fertility, love and beauty?',
-    answers: ['bastet'],
-    category: 'Needs to be categorised',
+    question: 'Who was the Ancient Egyptian goddess of fertility, love and beauty?',
+    answers: ['hathor'],
+    category: societyandhumanities,
   },
   {
     question: 'Who was Ancient Egyptian moon god?',
@@ -7459,9 +7454,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Name the number system which uses only the symbols 1 and 0.',
-    answers: ['thebinarysystem'],
-    category: 'Needs to be categorised',
+    question: 'What is the number system which uses only the symbols 1 and 0?',
+    answers: ['thebinarysystem', 'binary', 'binarysystem'],
+    category: scienceandgeography,
   },
   {
     question: 'The square root of 1 is?',
@@ -8876,11 +8871,6 @@ const questions = [
   {
     question: 'By what name is Lysergic acid diethylamide better known?',
     answers: ['lsd'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Ethylene glycol is frequently used in automobiles.. How?',
-    answers: ['anti-freeze'],
     category: 'Needs to be categorised',
   },
   {
@@ -10364,7 +10354,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Where is the \'whispering gallery\'?',
+    question: 'Where is the "whispering gallery"?',
     answers: ['st.paul\'scathedral'],
     category: 'Needs to be categorised',
   },
@@ -10379,12 +10369,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What make of car is a \'Thunderbird\'?',
+    question: 'What make of car is a "Thunderbird"?',
     answers: ['ford'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'What make of car is an \'Espace\'?',
+    question: 'What make of car is an "Espace"?',
     answers: ['renault'],
     category: 'Needs to be categorised',
   },
@@ -11001,11 +10991,6 @@ const questions = [
   {
     question: 'What is a catalogue of languages called?',
     answers: ['ethnologue'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'What is a gondola?',
-    answers: ['watertaxi'],
     category: 'Needs to be categorised',
   },
   {
@@ -13874,14 +13859,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'How old was the world\'s oldest man?',
-    answers: ['onehundredandfortyone'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Who was the world\'s oldest man?',
-    answers: ['birnarayanchaudhari'],
-    category: 'Needs to be categorised',
+    question: 'Who is the world\s oldest living person?',
+    answers: ['kanetanaka', 'tanaka'],
+    category: societyandhumanities,
   },
   {
     question: 'On a ship, what is the line that indicates the maximum load that may be transported?',
@@ -14324,8 +14304,8 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What did Dorothy\'s house land on in \'The Wizard Of Oz\'?',
-    answers: ['thewickedwitchofthewest'],
+    question: 'Who did Dorothy\'s house land on in \'The Wizard Of Oz\'?',
+    answers: ['thewickedwitchoftheeast', 'thewickedwitch', 'wickedwitch', 'wickedwitchoftheeast', 'witch', 'thewitch'],
     category: 'Needs to be categorised',
   },
   {
@@ -14435,8 +14415,8 @@ const questions = [
   },
   {
     question: 'Which films are about the Corleone family?',
-    answers: ['thegodfatherfilms'],
-    category: 'Needs to be categorised',
+    answers: ['thegodfatherfilms', 'godfather', 'thegodfather'],
+    category: artsandentertainment,
   },
   {
     question: 'Which was the first \'Indiana Jones\' film?',
@@ -17029,7 +17009,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'On Borneo and Sumatra, the literal translation of this ape\'s name means \"man of the forest.\"',
+    question: 'On Borneo and Sumatra, the literal translation of this ape\'s name means "man of the forest."',
     answers: ['orang-utan'],
     category: 'Needs to be categorised',
   },
@@ -17049,7 +17029,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'The insect class \"hymenoptera\" includes ants and these colonial honey-makers.',
+    question: 'The insect class "hymenoptera" includes ants and these colonial honey-makers.',
     answers: ['bees'],
     category: 'Needs to be categorised',
   },
@@ -17374,11 +17354,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What does the chort for of ctc stand for?',
-    answers: ['caretochat'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'Ascorbic acid is commonly reffered to as Vitamin - ?',
     answers: ['c'],
     category: 'Needs to be categorised',
@@ -17404,7 +17379,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'In organic chemistry nomenclature, the prefix \"meth\" means how many atoms of carbon?',
+    question: 'In organic chemistry nomenclature, the prefix "meth" means how many atoms of carbon?',
     answers: ['one'],
     category: 'Needs to be categorised',
   },
@@ -17424,7 +17399,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This Latin word meaning \"iron\" is the reason for iron\'s modern day chemical symbol (Fe).',
+    question: 'This Latin word meaning "iron" is the reason for iron\'s modern day chemical symbol (Fe).',
     answers: ['ferrum'],
     category: 'Needs to be categorised',
   },
@@ -17529,7 +17504,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which chemical element was foremerly known as the latin \"Kalium\", hence bears the symbol \"K\"?',
+    question: 'Which chemical element was foremerly known as the latin "Kalium", hence bears the symbol "K"?',
     answers: ['potassium'],
     category: 'Needs to be categorised',
   },
@@ -17594,7 +17569,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What is often referred to as \"the oldest profession\"?',
+    question: 'What is often referred to as "the oldest profession"?',
     answers: ['prostitution'],
     category: 'Needs to be categorised',
   },
@@ -17839,7 +17814,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This spiny fruit with a pungent odor and rich yellow flesh is considered \"The King of Fruits\" by many southeast asians.',
+    question: 'This spiny fruit with a pungent odor and rich yellow flesh is considered "The King of Fruits" by many southeast asians.',
     answers: ['durian'],
     category: 'Needs to be categorised',
   },
@@ -17889,7 +17864,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This chess term means \"in passing\"',
+    question: 'This chess term means "in passing"',
     answers: ['enpassant'],
     category: 'Needs to be categorised',
   },
@@ -17909,7 +17884,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What is this sign called \"*\"?',
+    question: 'What is this sign called "*"?',
     answers: ['asterisk'],
     category: 'Needs to be categorised',
   },
@@ -17984,7 +17959,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: '\"Yellow River\" is the common name for which Chinese river?',
+    question: '"Yellow River" is the common name for which Chinese river?',
     answers: ['hwangho'],
     category: 'Needs to be categorised',
   },
@@ -18489,7 +18464,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: '\"deinos\" and \"sauros\" roughly translate to?',
+    question: '"deinos" and "sauros" roughly translate to?',
     answers: ['terriblelizard'],
     category: 'Needs to be categorised',
   },
@@ -18599,7 +18574,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'These fighters always began a bout by saying, \"Hail Emperor, those about to die salute you.\"?',
+    question: 'These fighters always began a bout by saying, "Hail Emperor, those about to die salute you."?',
     answers: ['gladiators'],
     category: 'Needs to be categorised',
   },
@@ -18844,18 +18819,13 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who directed \"Jurassic Park III?\"',
+    question: 'Who directed "Jurassic Park III?"',
     answers: ['joejohnston'],
     category: 'Needs to be categorised',
   },
   {
     question: 'Drill a hole into/a crude uncouth person (answer in the form of word1/word2)?',
     answers: ['bore/boor'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Scram!/foot apparel (answer in form of word1/word2)',
-    answers: ['shoo/shoe'],
     category: 'Needs to be categorised',
   },
   {
@@ -18909,7 +18879,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'How do you say \"I Love You\" in German?',
+    question: 'How do you say "I Love You" in German?',
     answers: ['ichliebedich'],
     category: 'Needs to be categorised',
   },
@@ -18949,7 +18919,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which word means \"profound boredom\" in both french and english?',
+    question: 'Which word means "profound boredom" in both french and english?',
     answers: ['ennui'],
     category: 'Needs to be categorised',
   },
@@ -18964,17 +18934,17 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: '\"Now is the winter of our discontent\" is a line from which Shakespearian play?',
+    question: '"Now is the winter of our discontent" is a line from which Shakespearian play?',
     answers: ['richardiii'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'According To \"The Hitchhikers Guide To The Galaxy\" what number is the answer to everything?',
+    question: 'According To "The Hitchhikers Guide To The Galaxy" what number is the answer to everything?',
     answers: ['fortytwo'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Author of \"The Lighthouse\" and \"Eminent Victorians\"?',
+    question: 'Author of "The Lighthouse" and "Eminent Victorians"?',
     answers: ['virginiawoolf'],
     category: 'Needs to be categorised',
   },
@@ -18994,12 +18964,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'From which of Shakespeare\'s plays is this line: \"All the world\'s a stage...\"',
+    question: 'From which of Shakespeare\'s plays is this line: "All the world\'s a stage..."',
     answers: ['asyoulikeit'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'He penned the founding novel of the utopian genre, \"Utopia.\"?',
+    question: 'He penned the founding novel of the utopian genre, "Utopia."?',
     answers: ['sirthomasmore'],
     category: 'Needs to be categorised',
   },
@@ -19019,7 +18989,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'In HG Wells \"The Time Machine,\" two races of the future are the child-like Eloi, and the underground monsters called the ____?',
+    question: 'In HG Wells "The Time Machine," two races of the future are the child-like Eloi, and the underground monsters called the ____?',
     answers: ['morlocks'],
     category: 'Needs to be categorised',
   },
@@ -19059,7 +19029,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'The two races in HG Well\'s \"The Time Machine\" are the child-like Eloi and the subterannean ______?',
+    question: 'The two races in HG Well\'s "The Time Machine" are the child-like Eloi and the subterannean ______?',
     answers: ['morlocks'],
     category: 'Needs to be categorised',
   },
@@ -19079,7 +19049,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This early American statesman and inventor wrote the book, \"Fart proudly\"?',
+    question: 'This early American statesman and inventor wrote the book, "Fart proudly"?',
     answers: ['benjaminfranklin'],
     category: 'Needs to be categorised',
   },
@@ -19089,7 +19059,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What Irish playwright and author, wrote \"The Importance of Being Ernest\" and \"A Picture of Dorian Grey\" among others?',
+    question: 'What Irish playwright and author, wrote "The Importance of Being Ernest" and "A Picture of Dorian Grey" among others?',
     answers: ['oscarwilde'],
     category: 'Needs to be categorised',
   },
@@ -19144,27 +19114,27 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What was the sequel to Louisa May Alcott\'s \"Little Women\"?',
+    question: 'What was the sequel to Louisa May Alcott\'s "Little Women"?',
     answers: ['littlemen'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which Shakesperian play features the line \"Now is the winter of our discontent\"?',
+    question: 'Which Shakesperian play features the line "Now is the winter of our discontent"?',
     answers: ['richardiii'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which US author penned the novels \"Of Mice and Men\" and \"East Of Eden\"?',
+    question: 'Which US author penned the novels "Of Mice and Men" and "East Of Eden"?',
     answers: ['johnsteinbeck'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which US dramatist was once married to Marylin Monroe and penned the plays \"Death Of A Salesman\" and \"The Crucible\"?',
+    question: 'Which US dramatist was once married to Marylin Monroe and penned the plays "Death Of A Salesman" and "The Crucible"?',
     answers: ['arthurmiller'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which poet, in his \"Elegy Written in a Country Churchyard\" told us that \"Full many a flower is born to blush unseen / And waste its sweetnes on the desert air.\"?',
+    question: 'Which poet, in his "Elegy Written in a Country Churchyard" told us that "Full many a flower is born to blush unseen / And waste its sweetnes on the desert air."?',
     answers: ['thomasgray'],
     category: 'Needs to be categorised',
   },
@@ -19179,12 +19149,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who is the author of \"Brave New World\" ?',
+    question: 'Who is the author of "Brave New World" ?',
     answers: ['aldoushuxley'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who is the author of \"Harry Potter\" ?',
+    question: 'Who is the author of "Harry Potter" ?',
     answers: ['joanrowling', 'jkrowling', 'jk.rowling', 'j.k.rowling', 'rowling'],
     category: artsandentertainment,
   },
@@ -19199,22 +19169,22 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who wrote \"Animal Farm\"?',
+    question: 'Who wrote "Animal Farm"?',
     answers: ['georgeorwell'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who wrote \"Ten Little Indians?\"',
+    question: 'Who wrote "Ten Little Indians?"',
     answers: ['agathachristie'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who wrote \"The Rime of the Ancient Mariner?\"',
+    question: 'Who wrote "The Rime of the Ancient Mariner?"',
     answers: ['samueltaylorcoleridge'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who wrote \"The count of Monte-Christo\"?',
+    question: 'Who wrote "The count of Monte-Christo"?',
     answers: ['dumas'],
     category: 'Needs to be categorised',
   },
@@ -19259,7 +19229,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who wrote the long religious epic, \"Paradise Lost\"?',
+    question: 'Who wrote the long religious epic, "Paradise Lost"?',
     answers: ['johnmilton'],
     category: 'Needs to be categorised',
   },
@@ -19315,7 +19285,7 @@ const questions = [
   },
   {
     question: 'What is the name given to the number equal to 10 raised to the power of 100?',
-    answers: ['a\"googol\"'],
+    answers: ['a"googol"'],
     category: 'Needs to be categorised',
   },
   {
@@ -19404,17 +19374,17 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Richard Strauss\' majestic overture \"Also Sprach Zarathustra\" was the theme music for which Stanley Kubrick film?',
+    question: 'Richard Strauss\' majestic overture "Also Sprach Zarathustra" was the theme music for which Stanley Kubrick film?',
     answers: ['2001:aspaceodyessy'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'What was the Oscar-winning theme song from \"Breakfast at Tiffany\'s\"?',
+    question: 'What was the Oscar-winning theme song from "Breakfast at Tiffany\'s"?',
     answers: ['moonriver'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who directed the movie \"Blade Runner\"?',
+    question: 'Who directed the movie "Blade Runner"?',
     answers: ['ridleyscott'],
     category: 'Needs to be categorised',
   },
@@ -19424,37 +19394,37 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who played the lead in the movie \"Braveheart\"?',
+    question: 'Who played the lead in the movie "Braveheart"?',
     answers: ['melgibson'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who played the lead in the movie \"Castaway\"?',
+    question: 'Who played the lead in the movie "Castaway"?',
     answers: ['tomhanks'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who played the lead in the movie \"Erin Brokovich\"?',
+    question: 'Who played the lead in the movie "Erin Brokovich"?',
     answers: ['juliaroberts'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who played the lead in the movie \"Mission Impossible\"?',
+    question: 'Who played the lead in the movie "Mission Impossible"?',
     answers: ['tomcruise'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who played the lead in the movie \"Snatch\"?',
+    question: 'Who played the lead in the movie "Snatch"?',
     answers: ['bradpitt'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who played the lead in the movie \"The Mask\"?',
+    question: 'Who played the lead in the movie "The Mask"?',
     answers: ['jimcarrey'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who played the lead in the movie \"The Matrix\"?',
+    question: 'Who played the lead in the movie "The Matrix"?',
     answers: ['keanureeves'],
     category: 'Needs to be categorised',
   },
@@ -19524,12 +19494,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What was the original name of \"Little Rascals\"?',
+    question: 'What was the original name of "Little Rascals"?',
     answers: ['ourgang'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'What\'s the name of the Mummy in the film \"The Mummy\"?',
+    question: 'What\'s the name of the Mummy in the film "The Mummy"?',
     answers: ['imhotep'],
     category: 'Needs to be categorised',
   },
@@ -19579,7 +19549,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who were the rivals of the T-Birds in the movie \"Grease\"?',
+    question: 'Who were the rivals of the T-Birds in the movie "Grease"?',
     answers: ['scorpions'],
     category: 'Needs to be categorised',
   },
@@ -19609,7 +19579,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Band: \" ......... And the Bad Seeds\"',
+    question: 'Band: " ......... And the Bad Seeds"',
     answers: ['nickcave'],
     category: 'Needs to be categorised',
   },
@@ -19629,7 +19599,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'He wrote the operas \"The Magic Flute\" and \"The Marriage of Figaro\"',
+    question: 'He wrote the operas "The Magic Flute" and "The Marriage of Figaro"',
     answers: ['wolfgangamadeusmozart'],
     category: 'Needs to be categorised',
   },
@@ -19734,12 +19704,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This band\'s highly original video for \"Whip it,\" characterized by red flower pot hats was criticized for being both sado-masochistic and racist.',
+    question: 'This band\'s highly original video for "Whip it," characterized by red flower pot hats was criticized for being both sado-masochistic and racist.',
     answers: ['devo'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'This band\'s highly original video for \"Whip it,\" characterized by red flower pot hats was criticized for being both sado-masochistic and racist?',
+    question: 'This band\'s highly original video for "Whip it," characterized by red flower pot hats was criticized for being both sado-masochistic and racist?',
     answers: ['devo'],
     category: 'Needs to be categorised',
   },
@@ -19824,7 +19794,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What does the Italian term \"poco a poco\" mean?',
+    question: 'What does the Italian term "poco a poco" mean?',
     answers: ['littlebylittle'],
     category: 'Needs to be categorised',
   },
@@ -19849,7 +19819,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What kind of eyes did the girl in \"Lucy In The Sky With Diamonds\" have?',
+    question: 'What kind of eyes did the girl in "Lucy In The Sky With Diamonds" have?',
     answers: ['kaleidoscope'],
     category: 'Needs to be categorised',
   },
@@ -19914,7 +19884,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which formber Beatle released the hit single \"My Sweet Lord\"?',
+    question: 'Which formber Beatle released the hit single "My Sweet Lord"?',
     answers: ['georgeharrison'],
     category: 'Needs to be categorised',
   },
@@ -19929,12 +19899,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which of Beethoven\'s symphonies was the legendary \"Incomplete\"?',
+    question: 'Which of Beethoven\'s symphonies was the legendary "Incomplete"?',
     answers: ['the9thsymphony'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who are the lead singers of the band \"Full Metal Racquets\"?',
+    question: 'Who are the lead singers of the band "Full Metal Racquets"?',
     answers: ['johnmcenroeandpatcash'],
     category: 'Needs to be categorised',
   },
@@ -19979,7 +19949,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who recorded the 1969 hit \"Space Oddity\"?',
+    question: 'Who recorded the 1969 hit "Space Oddity"?',
     answers: ['davidbowie'],
     category: 'Needs to be categorised',
   },
@@ -19994,12 +19964,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"Pretty Woman?\"',
+    question: 'Who sang the song "Pretty Woman?"',
     answers: ['royorbison'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sings \"Imitation Of Life\"?',
+    question: 'Who sings "Imitation Of Life"?',
     answers: ['r.e.m.'],
     category: 'Needs to be categorised',
   },
@@ -20234,17 +20204,17 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'In addition to writing novels, Jonathan Swift also wrote social and philosophical commentary. In one satirical piece, \"A Modest Proposal,\" what did he suggest should be made out of the skin of children?',
+    question: 'In addition to writing novels, Jonathan Swift also wrote social and philosophical commentary. In one satirical piece, "A Modest Proposal," what did he suggest should be made out of the skin of children?',
     answers: ['gloves'],
     category: 'Needs to be categorised',
   },
   {
-    question: '-isms: The belief in God as a \"divine clockmaker,\" originating in the age of Enlightenment.',
+    question: '-isms: The belief in God as a "divine clockmaker," originating in the age of Enlightenment.',
     answers: ['deism'],
     category: 'Needs to be categorised',
   },
   {
-    question: '-isms: This branch of philosophy, characterised by the idea: \"The greatest pleasure and happiness for the greatest number,\" was founded by Jeremy Bentham and James Mill.',
+    question: '-isms: This branch of philosophy, characterised by the idea: "The greatest pleasure and happiness for the greatest number," was founded by Jeremy Bentham and James Mill.',
     answers: ['utilitarianism'],
     category: 'Needs to be categorised',
   },
@@ -20259,7 +20229,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Author of \"The World as Will\" and \"Representation\", pessimistic forbearer of Nietzsche?',
+    question: 'Author of "The World as Will" and "Representation", pessimistic forbearer of Nietzsche?',
     answers: ['arthurschopenhauer'],
     category: 'Needs to be categorised',
   },
@@ -20284,7 +20254,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'In what he called his \"Copernican Revolution\" this German philosopher proposed that the mind imposes space time, and causality on nature. He is Immanuel ---- ?',
+    question: 'In what he called his "Copernican Revolution" this German philosopher proposed that the mind imposes space time, and causality on nature. He is Immanuel ---- ?',
     answers: ['immanuelkant'],
     category: 'Needs to be categorised',
   },
@@ -20314,17 +20284,17 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What sort of man did Plato propose to rule his \"Republic\"?',
+    question: 'What sort of man did Plato propose to rule his "Republic"?',
     answers: ['aphilosopherking'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which French philosopher explored existentialist philosophy in his landmark book \"Nausea\" published in 1938?',
+    question: 'Which French philosopher explored existentialist philosophy in his landmark book "Nausea" published in 1938?',
     answers: ['jean-paulsartre'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which Greek philosopher proposed the Theory of Forms in \"The Republic\"?',
+    question: 'Which Greek philosopher proposed the Theory of Forms in "The Republic"?',
     answers: ['plato'],
     category: 'Needs to be categorised',
   },
@@ -20374,7 +20344,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which French Philosopher used a method of systematic doubt to arrive at his famous conclusion \"Cogito ergo sum\" (I think therefore I am)?',
+    question: 'Which French Philosopher used a method of systematic doubt to arrive at his famous conclusion "Cogito ergo sum" (I think therefore I am)?',
     answers: ['renedescartes'],
     category: 'Needs to be categorised',
   },
@@ -20449,7 +20419,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: '\"Scotch pine\", \"Douglas fir\", \"Noble fir\", \"Fraser fir\" are all commonly used as what?',
+    question: '"Scotch pine", "Douglas fir", "Noble fir", "Fraser fir" are all commonly used as what?',
     answers: ['christmastrees'],
     category: 'Needs to be categorised',
   },
@@ -20479,7 +20449,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which behaviorist conducted the \"Little Albert\" experiment?',
+    question: 'Which behaviorist conducted the "Little Albert" experiment?',
     answers: ['johnwatson'],
     category: 'Needs to be categorised',
   },
@@ -20509,32 +20479,32 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who Said \"Who controls the past controls the future. Who controls the present controls the past\"?',
+    question: 'Who Said "Who controls the past controls the future. Who controls the present controls the past"?',
     answers: ['georgeorwell'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said  \"The reports of my death are greatly exaggerated.\"?',
+    question: 'Who said  "The reports of my death are greatly exaggerated."?',
     answers: ['marktwain'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said \"For every action there is an equal and opposite reaction\"?',
+    question: 'Who said "For every action there is an equal and opposite reaction"?',
     answers: ['alberteienstein'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said \"Forgive your enemies, but never forget their names\"?',
+    question: 'Who said "Forgive your enemies, but never forget their names"?',
     answers: ['johnf.kennedy'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said \"That\'s one small step for man, one giant leap for mankind\"?',
+    question: 'Who said "That\'s one small step for man, one giant leap for mankind"?',
     answers: ['neilarmstrong'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said \"The hunger for love is much more difficult to remove than the hunger for bread.\"?',
+    question: 'Who said "The hunger for love is much more difficult to remove than the hunger for bread."?',
     answers: ['motherteresa'],
     category: 'Needs to be categorised',
   },
@@ -20544,17 +20514,17 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'who said  \"He who opens a school door, closes a prison\"?',
+    question: 'who said  "He who opens a school door, closes a prison"?',
     answers: ['victorhugo'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'who said  \"Religion... is the opium of the masses\"?',
+    question: 'who said  "Religion... is the opium of the masses"?',
     answers: ['karlmarx'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'who said  \"Today Europe tomorrow the world\"?',
+    question: 'who said  "Today Europe tomorrow the world"?',
     answers: ['adolfhitler'],
     category: 'Needs to be categorised',
   },
@@ -20611,11 +20581,6 @@ const questions = [
   {
     question: 'What is the name given to the supreme reality in Hinduism?',
     answers: ['brahman'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'What is the name of the field where Christ was crucified?',
-    answers: ['calvary'],
     category: 'Needs to be categorised',
   },
   {
@@ -20694,9 +20659,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What does LPG stands for?',
-    answers: ['liquidpetroleumgas'],
-    category: 'Needs to be categorised',
+    question: 'What does LPG stand for?',
+    answers: ['liquidpetroleumgas', 'liquifiedpetroleumgas'],
+    category: scienceandgeography,
   },
   {
     question: 'What engery does an Eolic power station?',
@@ -20735,8 +20700,8 @@ const questions = [
   },
   {
     question: 'Who devised the periodic table of elements?',
-    answers: ['mendelev'],
-    category: 'Needs to be categorised',
+    answers: ['dmitrimendeleev', 'dmitriivanovichmendeleev', 'mendeleev'],
+    category: scienceandgeography,
   },
   {
     question: 'Who discovered Vitamin C?',
@@ -20770,13 +20735,8 @@ const questions = [
   },
   {
     question: 'Whose ghost appears at the dinner table in \'Macbeth\'?',
-    answers: ['banquo\'s'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'A \"gyre\" is another term for what shape?',
-    answers: ['coil'],
-    category: 'Needs to be categorised',
+    answers: ['banquo\'s', 'banquo', 'banquos', 'lordbanquo'],
+    category: artsandentertainment,
   },
   {
     question: 'What is Kenny G\'s real surname?',
@@ -20785,23 +20745,8 @@ const questions = [
   },
   {
     question: 'What was Marilyn Monroe\'s given name at birth?',
-    answers: ['normajeanmortenson'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'As light as a .......',
-    answers: ['feather'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'As old as the .....?',
-    answers: ['hills'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'As old as the ...?',
-    answers: ['hills'],
-    category: 'Needs to be categorised',
+    answers: ['normajeanemortenson', 'normamortenson', 'mortenson'],
+    category: artsandentertainment,
   },
   {
     question: 'How many Astronaughs crewed the Gemini series of Spacecraft?',
@@ -20919,11 +20864,6 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Whats the main feature of a speedway motorbike?',
-    answers: ['nobrakes'],
-    category: 'Needs to be categorised',
-  },
-  {
     question: 'Which European club has won the most european cups in the 90s?',
     answers: ['acmilan'],
     category: 'Needs to be categorised',
@@ -21019,7 +20959,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What was the name of the restaurant the TV series \"Happy Days\"?',
+    question: 'What was the name of the restaurant the TV series "Happy Days"?',
     answers: ['arnolds'],
     category: 'Needs to be categorised',
   },
@@ -21179,12 +21119,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said \"The great masses of the people will more easily fall victims to a big lie than to a small one.\"?',
+    question: 'Who said "The great masses of the people will more easily fall victims to a big lie than to a small one."?',
     answers: ['adolfhitler'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who said \"The great masses of the people will more easily fall victims to a big lie than to a small one.\"?',
+    question: 'Who said "The great masses of the people will more easily fall victims to a big lie than to a small one."?',
     answers: ['adolfhitler'],
     category: 'Needs to be categorised',
   },
@@ -21214,12 +21154,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: '\"Carmine\" is a shade of which color?',
+    question: '"Carmine" is a shade of which color?',
     answers: ['red'],
     category: 'Needs to be categorised',
   },
   {
-    question: '\"The Coffee Cantata\" was written by who?',
+    question: '"The Coffee Cantata" was written by who?',
     answers: ['johannsebastianbach'],
     category: 'Needs to be categorised',
   },
@@ -21254,12 +21194,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'A \"gyre\" is another term for what shape?',
+    question: 'A "gyre" is another term for what shape?',
     answers: ['coil'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'A \"gyre\" is another term for what shape?',
+    question: 'A "gyre" is another term for what shape?',
     answers: ['coil'],
     category: 'Needs to be categorised',
   },
@@ -21364,7 +21304,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Famous Lyrics: \"There\'s a lady who knows all that glitters is gold and she\'s _____ _ _____ __ _____\"',
+    question: 'Famous Lyrics: "There\'s a lady who knows all that glitters is gold and she\'s _____ _ _____ __ _____"',
     answers: ['buyingastairwaytoheaven'],
     category: 'Needs to be categorised',
   },
@@ -21379,7 +21319,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'From which movie comes the song \"Under the Sea\"?',
+    question: 'From which movie comes the song "Under the Sea"?',
     answers: ['littlemermaid'],
     category: 'Needs to be categorised',
   },
@@ -21399,7 +21339,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'How did Mork, in \"Mork and Mindy\" say hello?',
+    question: 'How did Mork, in "Mork and Mindy" say hello?',
     answers: ['nanoonanoo'],
     category: 'Needs to be categorised',
   },
@@ -21474,7 +21414,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'In addition to writing novels, Jonathan Swift also wrote social and philosophical commentary. In one satirical piece, \"A Modest Proposal,\" what did he suggest should be made out of the skin of children?',
+    question: 'In addition to writing novels, Jonathan Swift also wrote social and philosophical commentary. In one satirical piece, "A Modest Proposal," what did he suggest should be made out of the skin of children?',
     answers: ['gloves'],
     category: 'Needs to be categorised',
   },
@@ -21564,7 +21504,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Joan Collins was how old when she posed semi-nude for \"Playboy\" in 1983?',
+    question: 'Joan Collins was how old when she posed semi-nude for "Playboy" in 1983?',
     answers: ['50'],
     category: 'Needs to be categorised',
   },
@@ -21589,7 +21529,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Literature: In HG Wells \"The Time Machine,\" two races of the future are the child-like Eloi, and the subterranean monsters called the .... ?',
+    question: 'Literature: In HG Wells "The Time Machine," two races of the future are the child-like Eloi, and the subterranean monsters called the .... ?',
     answers: ['morlocks'],
     category: 'Needs to be categorised',
   },
@@ -21599,7 +21539,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Mark Twain referred to the what as the \"stomach Steinway.\"?',
+    question: 'Mark Twain referred to the what as the "stomach Steinway."?',
     answers: ['accordion'],
     category: 'Needs to be categorised',
   },
@@ -21649,23 +21589,8 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Philosophy: Epicurus, who believed that pleasure is the highest good, gave us which term synonymous with hedonistic?',
+    question: 'Epicurus, who believed that pleasure is the highest good, gave us which term synonymous with hedonistic?',
     answers: ['epicurean'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Physics: Energy and Momentum are never lost, they are .... ?',
-    answers: ['conserved'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Physics: The color white is the absence or presence of all color?',
-    answers: ['presence'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Self-praise is no ....?',
-    answers: ['recommendation'],
     category: 'Needs to be categorised',
   },
   {
@@ -21809,12 +21734,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'These are words in different languages that have the same original source, eg: \"water\" (english) and \"wasser\" (german)?',
+    question: 'These are words in different languages that have the same original source, eg: "water" (english) and "wasser" (german)?',
     answers: ['cognates'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'These are words in different languages that have the same original source, eg: \"water\" (english) and \"wasser\" (german)?',
+    question: 'These are words in different languages that have the same original source, eg: "water" (english) and "wasser" (german)?',
     answers: ['cognates'],
     category: 'Needs to be categorised',
   },
@@ -21829,12 +21754,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'These fighters always began a bout by saying, \"Hail Emperor, those about to die salute you!\"?',
+    question: 'These fighters always began a bout by saying, "Hail Emperor, those about to die salute you!"?',
     answers: ['gladiators'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'This Irish republic political movement founded in 1905 to promote Ireland\'s independence, is translated as \"Ourselves Alone.\" What is it commonly called?',
+    question: 'This Irish republic political movement founded in 1905 to promote Ireland\'s independence, is translated as "Ourselves Alone." What is it commonly called?',
     answers: ['sinnfein'],
     category: 'Needs to be categorised',
   },
@@ -21859,7 +21784,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This city can be abbreivated to 3% of its size \"El Pueblo de Nuestra Senora la Reina de los Angeles de Porciuncula\"?',
+    question: 'This city can be abbreivated to 3% of its size "El Pueblo de Nuestra Senora la Reina de los Angeles de Porciuncula"?',
     answers: ['la'],
     category: 'Needs to be categorised',
   },
@@ -21919,7 +21844,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'This sport gave us the term \"Hang Ten.\"?',
+    question: 'This sport gave us the term "Hang Ten."?',
     answers: ['surfing'],
     category: 'Needs to be categorised',
   },
@@ -21949,7 +21874,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Time magazine named what its \"Man of the Year\" in 1982?',
+    question: 'Time magazine named what its "Man of the Year" in 1982?',
     answers: ['computer'],
     category: 'Needs to be categorised',
   },
@@ -22189,7 +22114,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What does \"zucchero\" mean in italian?',
+    question: 'What does "zucchero" mean in italian?',
     answers: ['sugar'],
     category: 'Needs to be categorised',
   },
@@ -22341,11 +22266,6 @@ const questions = [
   {
     question: 'What is the Taj Majal made of?',
     answers: ['marble'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'What is the URL for the quiz website?',
-    answers: ['http://www.meta-x.de/quiz'],
     category: 'Needs to be categorised',
   },
   {
@@ -22519,7 +22439,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'What three letter word can be placed before these words to make a new word - \"light\" \"break\" \"time\"?',
+    question: 'What three letter word can be placed before these words to make a new word - "light" "break" "time"?',
     answers: ['day'],
     category: 'Needs to be categorised',
   },
@@ -22644,13 +22564,8 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which Group sang the song \"November Rain\"?',
+    question: 'Which Group sang the song "November Rain"?',
     answers: ['gunsnroses'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Which US comapny makes the most profit per second??',
-    answers: ['ford'],
     category: 'Needs to be categorised',
   },
   {
@@ -22699,97 +22614,97 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which female singer collaborated with Eminem with the song \"Stan\"?',
+    question: 'Which female singer collaborated with Eminem with the song "Stan"?',
     answers: ['dido'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the Song \"Hotel California\"?',
+    question: 'Which group sang the Song "Hotel California"?',
     answers: ['eagles'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the Song \"Last Resort\"?',
+    question: 'Which group sang the Song "Last Resort"?',
     answers: ['paparoach'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the Song \"The Call\"?',
+    question: 'Which group sang the Song "The Call"?',
     answers: ['backstreetboys'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"All The Small Things\"?',
+    question: 'Which group sang the song "All The Small Things"?',
     answers: ['blink182'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Everything you want\"?',
+    question: 'Which group sang the song "Everything you want"?',
     answers: ['verticalhorizon'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Fuel\"?',
+    question: 'Which group sang the song "Fuel"?',
     answers: ['metallica'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Go Let It Out\"?',
+    question: 'Which group sang the song "Go Let It Out"?',
     answers: ['oasis'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"I Have A Dream\"?',
+    question: 'Which group sang the song "I Have A Dream"?',
     answers: ['westlife'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Its Gonna Be Me\"?',
+    question: 'Which group sang the song "Its Gonna Be Me"?',
     answers: ['n\'sync'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Learn To Fly\"?',
+    question: 'Which group sang the song "Learn To Fly"?',
     answers: ['foofighters'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Ordinary World\"?',
+    question: 'Which group sang the song "Ordinary World"?',
     answers: ['duranduran'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Original Prankster\"?',
+    question: 'Which group sang the song "Original Prankster"?',
     answers: ['offspring'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Picture Of You\"?',
+    question: 'Which group sang the song "Picture Of You"?',
     answers: ['boyzone'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Rollin\"?',
+    question: 'Which group sang the song "Rollin"?',
     answers: ['limpbizkit'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Smells Like Teen Spirit\"?',
+    question: 'Which group sang the song "Smells Like Teen Spirit"?',
     answers: ['nirvana'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Thank You For Loving Me\"?',
+    question: 'Which group sang the song "Thank You For Loving Me"?',
     answers: ['bonjovi'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"Unforgiven\"?',
+    question: 'Which group sang the song "Unforgiven"?',
     answers: ['metallica'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which group sang the song \"sleeping child\"?',
+    question: 'Which group sang the song "sleeping child"?',
     answers: ['michaellearnstorock'],
     category: 'Needs to be categorised',
   },
@@ -22814,7 +22729,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Which song is used in the movie \"Loser\"?',
+    question: 'Which song is used in the movie "Loser"?',
     answers: ['teenagedirtbag'],
     category: 'Needs to be categorised',
   },
@@ -22964,17 +22879,17 @@ const questions = [
     category: scienceandgeography,
   },
   {
-    question: 'Who sang the Song \"American Pie\"?',
+    question: 'Who sang the Song "American Pie"?',
     answers: ['donmclean'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the Song \"Beautiful Day\"?',
+    question: 'Who sang the Song "Beautiful Day"?',
     answers: ['u2'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the Song \"Gangsta\'s Paradise\"?',
+    question: 'Who sang the Song "Gangsta\'s Paradise"?',
     answers: ['coolio'],
     category: artsandentertainment,
   },
@@ -22984,42 +22899,37 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"Another Brick In The Wall\"?',
+    question: 'Who sang the song "Another Brick In The Wall"?',
     answers: ['pinkfloyd'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"Californication\"?',
+    question: 'Who sang the song "Californication"?',
     answers: ['redhotchillipeppers'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"Desert Rose\"?',
+    question: 'Who sang the song "Desert Rose"?',
     answers: ['sting'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"I Want You\"?',
-    answers: ['savagedarden'],
-    category: 'Needs to be categorised',
-  },
-  {
-    question: 'Who sang the song \"I\'ll Be Missing You\"?',
+    question: 'Who sang the song "I\'ll Be Missing You"?',
     answers: ['puffdaddy'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"Run To You\"?',
+    question: 'Who sang the song "Run To You"?',
     answers: ['bryanadams'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"The Way I Am\"?',
+    question: 'Who sang the song "The Way I Am"?',
     answers: ['eminem'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the song \"We Didn\'t Start The Fire\"?',
+    question: 'Who sang the song "We Didn\'t Start The Fire"?',
     answers: ['billyjoel'],
     category: 'Needs to be categorised',
   },
@@ -23029,7 +22939,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sang the theme song to the James Bond movie, \"A View to A Kill\"?',
+    question: 'Who sang the theme song to the James Bond movie, "A View to A Kill"?',
     answers: ['duranduran'],
     category: 'Needs to be categorised',
   },
@@ -23039,12 +22949,12 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who stars in the movie \"Tomb Raider\"?',
+    question: 'Who stars in the movie "Tomb Raider"?',
     answers: ['angelinajolie'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who sung the Song \"Fast Car\"?',
+    question: 'Who sung the Song "Fast Car"?',
     answers: ['tracychapman'],
     category: 'Needs to be categorised',
   },
@@ -23089,17 +22999,17 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who was voted \"Time Magazine\'s\" man of the year in 1938?',
+    question: 'Who was voted "Time Magazine\'s" man of the year in 1938?',
     answers: ['adolfhitler'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who wrote the novel that the play \"Les Miserables\" is based on?',
+    question: 'Who wrote the novel that the play "Les Miserables" is based on?',
     answers: ['victorhugo'],
     category: 'Needs to be categorised',
   },
   {
-    question: 'Who wrote the original story \"The Lost World\"?',
+    question: 'Who wrote the original story "The Lost World"?',
     answers: ['sirarthurconandoyle'],
     category: 'Needs to be categorised',
   },
@@ -23124,9 +23034,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'ho was singer of the QUEEN?',
-    answers: ['freddiemercury'],
-    category: 'Needs to be categorised',
+    question: 'Who was the lead singer of Queen?',
+    answers: ['freddiemercury', 'mercury'],
+    category: artsandentertainment,
   },
   {
     question: 'how many strings on a seven string guitar?',
@@ -23134,7 +23044,7 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'the \"ZIP\" in ZIP Code is an abrieviation of?',
+    question: 'the "ZIP" in ZIP Code is an abrieviation of?',
     answers: ['zoningimprovementplan'],
     category: 'Needs to be categorised',
   },
@@ -23144,9 +23054,9 @@ const questions = [
     category: 'Needs to be categorised',
   },
   {
-    question: 'what is the most frequently seen comet?',
+    question: 'What is the most frequently seen comet?',
     answers: ['encke'],
-    category: 'Needs to be categorised',
+    category: scienceandgeography,
   },
   {
     question: 'what is the name of the cryptography machine used by the german\'s in WW2?',
